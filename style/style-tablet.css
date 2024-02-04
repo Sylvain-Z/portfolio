@@ -1,0 +1,77 @@
+/* TABLETTE */
+
+@media screen and (min-width: 426px) {
+    .home {
+        background-image: url('../assets/images/contenu/Fond.jpg');
+    }
+
+    .home_logo {
+        margin-top: 125px;
+    }
+
+    @keyframes loading {
+        0% {
+            transform: scaleX(1);
+        }
+
+        80% {
+            transform: scaleX(35);
+            opacity: 1;
+            height: 2px;
+        }
+
+        100% {
+            transform: scaleX(40);
+            opacity: 0;
+            height: 0px;
+        }
+    }
+
+    /* PORTFOLIO ----------------------------------------------- */
+
+    header {
+        height: 100vh;
+        background-size: cover;
+        background-position: 0 -50px;
+    }
+
+    .shadow_header {
+        height: 300px;
+        background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(43, 43, 43, 0));
+    }
+    nav {
+        flex-direction: row;
+        justify-content: center;
+        margin: 0px auto;
+    }
+    header h2 {
+        bottom: 75px;
+    }
+
+    /* PROJETS */
+
+    .flex_grid {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .project_card {
+        width: 50%;
+    }
+
+
+
+    /* TOUTES MES COMPETENCES */
+
+    .skills_list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .skill_card {
+        margin: 5px 5px 5px 5px;
+    }
+
+
+}

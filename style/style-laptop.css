@@ -1,0 +1,101 @@
+/* LAPTOP */
+
+@media screen and (min-width: 781px) {
+
+    /* ACCUEIL -------------------- */
+    .home_logo {
+        margin-top: 275px;
+    }
+
+    @keyframes loading {
+        0% {
+            transform: scaleX(1);
+        }
+
+        80% {
+            transform: scaleX(50);
+            opacity: 1;
+            height: 2px;
+        }
+
+        100% {
+            transform: scaleX(55);
+            opacity: 0;
+            height: 0px;
+        }
+    }
+
+    /* GENERAL */
+
+    header {
+        background-position: -0px -200px;
+    }
+
+    .shadow_header {
+        height: 200px;
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(43, 43, 43, 0));
+    }
+
+    .logoETnav {
+        width: 90%;
+        margin: 0 auto;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: first baseline;
+    }
+
+    .divlogo_header {
+        margin: 0;
+        /* annule la marge du style-tablet */
+    }
+
+    nav {
+        height: 50px;
+        /* enlève l'effet de bord de la height du header */
+        margin: 0;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    
+    header h2 {
+        font-size: 40px;
+    }
+    .citation {
+        font-size: 25px;
+    }
+
+
+    /* MON HISTOIRE */
+
+    #journey {
+        width: auto;
+    }
+
+    .story_telling p {
+        width: 75%;
+    }
+
+    /* PROJETS */
+
+    .project_card {
+        width: 30%;
+    }
+
+
+    /* COMPETENCES */
+
+    .dev,
+    .merge_logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .merge_logo2 {
+        width: 40%;
+        height: 40%;
+    }
+
+
+    /* TOUTES MES COMPETENCES */
+
+}

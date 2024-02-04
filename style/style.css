@@ -1,0 +1,659 @@
+:root {
+
+    --White: rgb(255, 255, 250);
+    --Black: rgb(20, 20, 20);
+    --Yellow: rgb(204, 158, 53);
+    --Green: rgb(29, 146, 0);
+
+    --backG-deco: rgba(0, 0, 0, 0.2);
+    --backGDarker-deco: rgba(0, 0, 0, 0.7);
+}
+
+@font-face {
+    font-family: 'Lemon Milk';
+    src: url('../assets/fonts/LemonMilk.otf');
+}
+
+@font-face {
+    font-family: 'Caviar Dreams';
+    src: url('../assets/fonts/CaviarDreams.ttf');
+}
+
+@font-face {
+    font-family: 'Caviar Dreams Bold';
+    src: url('../assets/fonts/CaviarDreams_Bold.ttf');
+}
+
+@font-face {
+    font-family: 'NeutraText Light';
+    src: url('../assets/fonts/NeutraText-Light.otf');
+}
+
+@font-face {
+    font-family: 'NeutraText';
+    src: url('../assets/fonts/NeutraText-Book.otf');
+}
+
+@font-face {
+    font-family: 'NeutraText Bold';
+    src: url('../assets/fonts/NeutraText-Bold.otf');
+}
+
+/* PROPRIETES COMMUNES */
+
+html {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*>a {
+    text-decoration: none;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'NeutraText';
+}
+
+/* PAGE D'ACCUEIL */
+.home {
+    background-image: url('../assets/images/contenu/FondVert.jpg');
+    background-size: cover;
+}
+
+.home_logo {
+    display: block;
+    width: 150px;
+    margin: auto;
+    margin-top: 275px;
+    opacity: 0;
+}
+
+.name {
+    font-family: 'Lemon Milk';
+    text-align: center;
+    text-shadow: 0 0 px black;
+    color: var(--White);
+    font-size: 25px;
+    margin-top: -45px;
+    opacity: 0;
+}
+
+.enter_button {
+    display: block;
+    height: 18px;
+    margin: auto;
+    margin-top: 30px;
+    opacity: 0;
+}
+
+.enter_button:hover {
+    height: 20px;
+}
+
+#loader {
+    width: 15px;
+    height: 2px;
+    background-color: var(--White);
+    margin: auto;
+    margin-top: 0px;
+}
+
+#loader {
+    animation-name: loading;
+    animation-duration: 1.5s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+}
+
+.enter_button,
+.home_logo,
+.name {
+    animation-name: EntrerAppear;
+    animation-duration: 0.5s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes EntrerAppear {
+    0% {
+        opacity: 0;
+        transform: translateY(0)
+    }
+
+    100% {
+        transform: translateY(10px);
+        opacity: 1;
+    }
+}
+
+@keyframes loading {
+    0% {
+        transform: scaleX(1);
+    }
+
+    80% {
+        transform: scaleX(20);
+        opacity: 1;
+        height: 2px;
+    }
+
+    100% {
+        transform: scaleX(25);
+        opacity: 0;
+        height: 0px;
+    }
+}
+
+/* PORTFOLIO ----------------------------------------------- */
+h1,
+h2,
+h3,
+h4,
+h5 {
+    text-align: center;
+    font-family: 'Caviar Dreams';
+    text-transform: capitalize;
+}
+
+h1 {
+    font-size: 20px;
+    color: var(--White);
+}
+
+h2 {
+    color: var(--Yellow);
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+
+h2::before {
+    content: " < ";
+}
+
+h2::after {
+    content: " /> ";
+}
+
+header {
+    position: relative;
+    background-image: url('../assets/images/contenu/Photo.jpg');
+    background-size: 150%;
+    background-position: -150px -30px;
+    width: 100%;
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 0 0 0;
+    z-index: 1;
+}
+
+.shadow_header {
+    width: 100%;
+    height: 280px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(43, 43, 43, 0));
+}
+
+.logoETnav {
+    display: flex;
+    flex-direction: column;
+    z-index: 20;
+}
+
+.divlogo_header {
+    width: 300px;
+    margin: auto;
+    text-shadow: 0 0 1px rgb(20, 20, 20);
+    display: flex;
+    flex-direction: column;
+}
+
+.logo_header {
+    width: 75px;
+    margin: auto;
+}
+
+.name_header {
+    font-size: 25px;
+    margin: -30px 0 10px 0;
+    font-family: 'Lemon Milk';
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Caviar Dreams Bold';
+    text-transform: uppercase;
+    text-align: center;
+}
+
+nav a {
+    font-size: 20px;
+    color: var(--White);
+    text-shadow: 0 0 1px rgb(20, 20, 20);
+    padding: 10px 25px;
+}
+
+nav a:hover {
+    color: var(--Yellow);
+    background-color: var(--backGDarker-deco);
+}
+header h2 {
+    text-align: left;
+    font-size: 20px;
+    position: absolute;
+    margin: 0;
+    padding: 10px 15px;
+    left: 0px;
+    bottom: 10px;
+    background-color: var(--backGDarker-deco);
+}
+.citation {
+    width: 80%;
+    margin: auto;
+    font-size: 20px;
+    color: var(--White);
+    margin-bottom: 50px;
+}
+
+footer {
+    background-image: url('../assets/images/contenu/Fond.jpg');
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    white-space: wrap;
+    padding: 5% 10%;
+}
+
+footer a {
+    width: 25px;
+}
+
+footer img,
+footer .fa-envelope,
+footer .fa-phone {
+    width: 100%;
+}
+
+.main_page {
+    background-image: url('../assets/images/contenu/FondVert.jpg');
+    width: 100%;
+    margin: auto;
+    padding: 50px 0;
+}
+
+
+/* PROJETS */
+
+h3 {
+    color: var(--Yellow);
+    font-size: 20px;
+    margin: 25px 0;
+}
+
+#projects_ctn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flex_grid {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: 25px auto;
+    background-color: var(--White);
+    padding-bottom: 25px;
+}
+
+.project:hover {
+    transform: scale(1.02, 1.02);
+    box-shadow: 0 0 10px 5px var(--Black);
+}
+
+.project img {
+    width: 100%;
+}
+
+.project p,
+.project li {
+    color: var(--Black);
+    margin: 25px;
+    font-family: 'NeutraText';
+    list-style: none;
+}
+
+.project li {
+    margin-left: 50px;
+}
+
+.fa-chevron-up,
+.fa-chevron-down {
+    margin-top: 25px;
+}
+
+.fa-chevron-up:hover,
+.fa-chevron-down:hover {
+    cursor: pointer;
+}
+
+.toggle {
+    display: none;
+}
+
+.button,
+.button_book {
+    font-family: 'NeutraText';
+    text-transform: capitalize;
+    color: var(--Black);
+    text-align: center;
+    margin: 50px 0;
+    padding: 10px 25px;
+    background-color: var(--Yellow);
+    border: 1px solid var(--Yellow);
+    /* sans ça le hover fait redimensionner l'élément */
+}
+
+.button:hover,
+.button_book:hover {
+    border: 1px solid var(--Yellow);
+    color: var(--Yellow);
+    background-color: transparent;
+}
+
+
+/* COMPETENCES */
+
+h4 {
+    color: var(--Green);
+    font-size: 18px;
+}
+
+.skills {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: -25px;
+    /* sert à coller les blocs compétences au projet précédent */
+    padding: 25px;
+    background-color: var(--White);
+}
+
+.technologies {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    margin-top: 25px;
+}
+
+.dev,
+.merge_logo {
+    width: 35px;
+    height: 35px;
+}
+
+.merge_logo {
+    position: relative;
+}
+
+.merge_logo1 {
+    width: 100%;
+}
+
+.merge_logo2 {
+    width: 40%;
+    height: 40%;
+    position: absolute;
+    top: 60%;
+    left: 30%;
+}
+
+.design_skills {
+    width: 100%;
+}
+
+
+/* TOUTES MES COMPETENCES */
+
+.skills_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+.skill_card {
+    position: relative;
+    background-color: var(--Yellow);
+    width: 340px;
+    height: 340px;
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+
+.recto {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-size: cover;
+    z-index: 1;
+}
+
+#design-recto {
+    background-image: url('../assets/images/contenu/SkillsDesign.jpg');
+}
+
+#dev-recto {
+    background-image: url('../assets/images/contenu/SkillsDev.jpg');
+}
+
+#devPlus-recto {
+    background-image: url('../assets/images/contenu/SkillsPlus+.jpg');
+    background-position: -25px 0;
+}
+
+#outilsweb-recto {
+    background-image: url('../assets/images/contenu/SkillsOutilsWeb.jpg');
+}
+
+#loisirs-recto {
+    background-image: url('../assets/images/contenu/SkillsLoisirs.jpg');
+    background-position: 0 -100px;
+}
+
+#softskills-recto {
+    background-image: url('../assets/images/contenu/SkillsSoft.jpg');
+}
+
+.recto h3 {
+    margin: 0;
+    /* réinitialise la margin du h3 général */
+    line-height: 340px;
+    /* = .skill_card : height */
+    background-color: var(--backGDarker-deco);
+    z-index: 10;
+}
+
+.verso {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--backGDarker-deco);
+    color: var(--White);
+    z-index: 20;
+}
+
+.verso p {
+    font-family: 'NeutraText Bold';
+    color: var(--Yellow);
+}
+
+.verso p,
+.verso ul,
+.verso li {
+    font-size: 20px;
+    margin: 5px 0;
+    text-align: center;
+}
+
+.verso li {
+    list-style: none;
+}
+
+.skillsShow,
+.skillsHide {
+    position: absolute;
+    color: var(--Yellow);
+    z-index: 30;
+}
+
+.skillsShow {
+    top: 15px;
+    right: 25px;
+}
+
+.skillsHide {
+    bottom: 35px;
+    right: 25px;
+}
+
+.hidenList {
+    display: none;
+}
+
+
+/* HISTOIRE */
+
+#journey {
+    background-image: url('./images/contenu/Fond.jpg');
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.story_telling p,
+#journey>p {
+    width: 85%;
+    margin: 25px auto;
+    font-size: 18px;
+    line-height: 30px;
+    color: var(--White);
+}
+
+#journey>p {
+    font-style: italic;
+}
+
+
+/* HORLOGE/CONTACT ------------------------------------------------------*/
+
+#contact {
+    width: 100%;
+    padding: 25px;
+}
+
+.contact_title {
+    margin-top: 0;
+    color: var(--White);
+}
+
+.div_flex {
+    position: relative;
+    width: 280px;
+    margin: auto;
+}
+
+.timer, .timer_clock_hand {
+    display: block;
+    width: 100%;
+    /* 350px du .div_flex */
+}
+.timer_clock_hand {
+    position: absolute;
+    top: 0;
+    animation: TimerRotate 20s linear 1s infinite;
+    animation-timing-function: steps(1);
+}
+
+.photo {
+    position: absolute;
+    display: block;
+    width: 30%;
+    bottom: 20%;
+    right: 20%;
+    border-radius: 50%;
+    animation: Pulse 2s infinite;
+}
+
+#CV {
+    position: absolute;
+    display: block;
+    bottom: 25%;
+    right: 25%;
+    font-family: 'Caviar Dreams Bold';
+    font-size: 18px;
+    color: var(--White);
+}
+
+.picto_contact_phone {
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    z-index: 10;
+}
+
+.picto_contact_mail {
+    position: absolute;
+    top: 25%;
+    right: 25%;
+    z-index: 10;
+}
+
+.btn {
+    padding: 15px 14px;
+    background-image: url('../assets/images/contenu/Fond.jpg');
+    border-radius: 30px;
+    color: var(--White);
+    box-shadow: -7px -7px 20px 0 rgba(0, 0, 0, 0.7),
+        7px 7px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    box-shadow: inset -7px -7px 20px 0 rgba(0, 0, 0, 0.7),
+        inset 2px 2px 20px 0 rgba(0, 0, 0, 0.2), -7px -7px 20px 0 rgba(0, 0, 0, 0.7),
+        7px 7px 10px 0 rgba(0, 0, 0, 0.2);
+    ;
+
+}
+
+.hiden {
+    display: none;
+}

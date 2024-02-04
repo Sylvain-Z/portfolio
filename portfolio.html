@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/style.css" />
+  <link rel="stylesheet" href="style/style-animations.css" />
+  <link rel="stylesheet" href="style/style-tablet.css">
+  <link rel="stylesheet" href="style/style-laptop.css">
+  <link rel="stylesheet" href="style/style-desktop.css">
+  <link rel="shortcut icon" href="images/favicon.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>Sylvain ZOOGONES - Portfolio</title>
+</head>
+
+<body class="body_main">
+
+  <header>
+    <div class="shadow_header"></div>
+
+    <div class="logoETnav">
+      <div class="divlogo_header">
+        <img class="logo_header" src="./assets/images/picto_perso/Logo.png" alt="logo" />
+        <h1 class="name_header">Sylvain Zoogones</h1>
+      </div>
+
+      <nav>
+        <a href="#projects_ctn">
+          <p>Projets</p>
+        </a>
+        <a href="#journey">
+          <p>Histoire</p>
+        </a>
+        <a href="#CV">
+          <p>CV</p>
+        </a>
+        <a href="#contact">
+          <p>Contact</p>
+        </a>
+      </nav>
+      <h2>Bienvenue sur mon profil</h2>
+  </header>
+
+  <main class="main_page">
+
+    
+    <p class="citation">"Je suis développeur Fullstack Js avec une prédilection pour le Frontend. Mes
+      technologies principales sont React.js et Node.js."</p>
+
+    <!-- ------------------------PROJETS------------------------- -->
+
+    <section id="projects_ctn">
+      <h2>Mes projets</h2>
+
+      <div class="flex_grid">
+
+
+        <div class="project_card">
+          <article class="project">
+            <h3>OZES STORE Site e-commerce</h3>
+            <img src="./assets/images/contenu/PROJETS_OZES_SITE.jpg" alt="Logo Ozes Store" class="menu_home_pictures" />
+            <i class="fa-solid fa-chevron-down fa-xl toggleshow"></i>
+            <i class="toggleHide"></i> <!-- affichage géré en JS -->
+            <div class="contentToToggle toggle">
+              <p>Il s'agit de la refonte du site e-commerce précédemment réalisé avec un CMS.</p>
+              <p>Dans cette nouvelle version du site j'ai développé :</p>
+              <ul>
+                <li>Galerie des produits</li>
+                <li>Panier d'achat</li>
+                <li>Gestion du panier</li>
+                <li>Mise en place du paiement via stripe</li>
+                <li>Formulaire de contact</li>
+                <li>Création et gestion des comptes clients</li>
+                <li>Messagerie interne entre les clients et les employés</li>
+                <li>Création et gestion de comptes employés</li>
+                <li>Compte administrateurs et compte modérateurs</li>
+                <li>Gestions des commandes</li>
+                <li>Gestions des stocks des produits</li>
+                <li>Gestion des messages reçus</li>
+                <li>etc...</li>
+              </ul>
+              <a class="button" href="https://sylvainzoogones.wixsite.com/ozes-store">Site CMS</a>
+              <a class="button" href="https://github.com/Sylvain-Z/ozes_store">GitHub App</a>
+            </div>
+          </article>
+          <!-- ----------------------COMPETENCES ASSOCIEES AU PROJET----------------------- -->
+          <section class="skills">
+            <div class="technologies">
+              <img class="dev" src="./assets/images/logos/icons8-react-native-256.png" alt="logo react" title="react" />
+              <div class="merge_logo">
+                <img class="dev merge_logo1" src="./assets/images/logos/icons8-nodejs-240.png" alt="logo node"
+                  title="node.js" />
+                <img class="dev merge_logo2" src="./assets/images/logos/icons8-nodejs-256.png" alt="logo node js"
+                  title="node.js" />
+              </div>
+              <img class="dev" src="./assets/images/logos/icons8-logo-de-mysql-240.png" alt="logo mysql"
+                title="mysql" />
+              <img class="dev" src="./assets/images/logos/icons8-javascript-256.png" alt="logo javascript"
+                title="Javascript" />
+              <img class="dev" src="./assets/images/logos/icons8-toupet-240.png" alt="logo sass" title="scss" />
+            </div>
+          </section>
+        </div>
+
+        <div class="project_card">
+          <article class="project">
+            <h3>Mon Portfolio</h3>
+            <img src="./assets/images/contenu/LogoSZ.jpg" alt="Logo Ozes Store" class="menu_home_pictures" />
+            <i class="fa-solid fa-chevron-down fa-xl toggleshow"></i>
+            <i class="toggleHide"></i> <!-- affichage géré en JS -->
+            <div class="contentToToggle toggle">
+              <p>Le site sur lequel vous naviguez.</p>
+            </div>
+          </article>
+          <!-- ----------------------COMPETENCES ASSOCIEES AU PROJET----------------------- -->
+          <section class="skills">
+            <div class="technologies">
+              <img class="dev" src="./assets/images/logos/icons8-html-240.png" alt="logo html" title="html" />
+              <img class="dev" src="./assets/images/logos/icons8-css-240.png" alt="logo css" title="css" />
+              <img class="dev" src="./assets/images/logos/icons8-javascript-256.png" alt="logo javascript"
+                title="Javascript" />
+            </div>
+          </section>
+        </div>
+
+        <div class="project_card">
+          <article class="project">
+            <h3>OZES STORE Collections</h3>
+            <img src="./assets/images/contenu/PROJETS_OZES-PRODUITS.jpg" alt="Logo Ozes Store"
+              class="menu_home_pictures" />
+            <i class="fa-solid fa-chevron-down fa-xl toggleshow"></i>
+            <i class="toggleHide"></i> <!-- affichage géré en JS -->
+            <div class="contentToToggle toggle">
+              <p>Il s'agit d'un projet entrepreunarial. J'ai été directeur artisque sur ce projet. J'ai donc pu le gérer
+                etle réaliser dans son entièreté. Du développement de la collection de vêtements en passant par la
+                création
+                d'une collection de bague, mon objectif a été de donner à cette marque, Ozes Store, une identité unique
+                et
+                originale.</p>
+              <p>Au delà de consolider mes compétences de designer produit et graphique, ce projet m'a
+                énormément appris
+                surle monde de l'entreprise et de la gestion de projet puisque j'en ai été le responsable.</p>
+              <a class="button" href="https://www.behance.net/gallery/115202851/Ozes-Store-Collection-1">Voir t-shirts</a>
+              <a class="button" href="https://www.behance.net/gallery/122645939/Bagues-Ozes-Store">Voir bagues</a>
+            </div>
+          </article>
+          <!-- ----------------------COMPETENCES ASSOCIEES AU PROJET----------------------- -->
+          <section class="skills">
+            <div class="technologies">
+              <img class="design_skills" src="./assets/images/logos/Desgin.jpg" alt="logo html"
+                title="Design 2D et 3D" />
+            </div>
+          </section>
+        </div>
+
+      </div>
+
+
+
+      <a class="button_book" href="https://www.behance.net/Sylvainz">Voir mon book complet</a>
+    </section>
+
+    <!-- ------------------------TOUTES MES COMPETENCES------------------------- -->
+
+    <section>
+      <h2>Mon savoir faire</h2>
+      <div class="skills_list">
+        <article class="skill_card">
+          <div id="design-recto" class="recto">
+            <h3>Design</h3>
+            <i class="fa-solid fa-chevron-down fa-lg skillsShow"></i>
+            <i class="skillsHide"></i> <!-- affichage géré en JS -->
+          </div>
+          <div class="verso hidenList">
+            <p>Design 2D</p>
+            <ul>
+              <li>Photoshop</li>
+              <li>Illustrator</li>
+              <li>Indesign</li>
+              <li>Figma</li>
+            </ul>
+            <p>Design 3D</p>
+            <ul>
+              <li>Modélisation 3D</li>
+              <li>Fabrication Additive</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="skill_card">
+          <div id="dev-recto" class="recto">
+            <h3>Développement Web</h3>
+            <i class="skillsHide"></i> <!-- affichage géré en JS -->
+            <i class="fa-solid fa-chevron-down fa-lg skillsShow"></i>
+          </div>
+          <div class="verso hidenList">
+            <p>Frontend - Spécialité</p>
+            <ul>
+              <li>HTML - CSS - SCSS</li>
+              <li>React js - Javascript</li>
+            </ul>
+            <p>BackEnd</p>
+            <ul>
+              <li>Node js</li>
+            </ul>
+            <p>Base de données</p>
+            <ul>
+              <li>MySql</li>
+            </ul>
+          </div>
+        </article>
+
+
+        <article class="skill_card">
+          <div id="devPlus-recto" class="recto">
+            <h3>Les plus</h3>
+            <i class="skillsHide"></i> <!-- affichage géré en JS -->
+            <i class="fa-solid fa-chevron-down fa-lg skillsShow"></i>
+          </div>
+          <div class="verso hidenList">
+            <p>Developpement</p>
+            <ul>
+              <li>Php</li>
+              <li>Autodidacte</li>
+              <li>Adaptabilité</li>
+            </ul>
+            <p>Autres</p>
+            <ul>
+              <li>Veille</li>
+              <li>Management et gestion de projet</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="skill_card">
+          <div id="softskills-recto" class="recto">
+            <h3>Soft Skills</h3>
+            <i class="fa-solid fa-chevron-down fa-lg skillsShow"></i>
+            <i class="skillsHide"></i> <!-- affichage géré en JS -->
+          </div>
+          <div class="verso hidenList">
+            <p>Je suis</p>
+            <ul>
+              <li>Autodidacte</li>
+              <li>Polyvalent</li>
+              <li>Organisé</li>
+              <li>Curieux</li>
+              <li>Proactif</li>
+              <li>Capable d'adaptabilité</li>
+              <li>Possède l'esprit d'équipe</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="skill_card">
+          <div id="outilsweb-recto" class="recto">
+            <h3>Outils</h3>
+            <i class="fa-solid fa-chevron-down fa-lg skillsShow"></i>
+            <i class="skillsHide"></i> <!-- affichage géré en JS -->
+          </div>
+          <div class="verso hidenList">
+            <p>Bureautique</p>
+            <ul>
+              <li>Word</li>
+              <li>Excel</li>
+              <li>Powerpoint</li>
+            </ul>
+            <p>Environnement de développement</p>
+            <ul>
+              <li>VSC</li>
+              <li>GitHub</li>
+              <li>Trello</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="skill_card">
+          <div id="loisirs-recto" class="recto">
+            <h3>Loisirs</h3>
+            <i class="fa-solid fa-chevron-down fa-lg skillsShow"></i>
+            <i class="skillsHide"></i> <!-- affichage géré en JS -->
+          </div>
+          <div class="verso hidenList">
+            <p>Sport</p>
+            <ul>
+              <li>Fitness</li>
+              <li>Skateboard</li>
+              <li>Snowboard</li>
+            </ul>
+            <p>Musique</p>
+            <ul>
+              <li>Je joue du piano</li>
+            </ul>
+          </div>
+        </article>
+
+
+      </div>
+    </section>
+
+
+
+    <!-- ------------------------HISTOIRE------------------------- -->
+
+    <section id="journey">
+      <h2>Mon Histoire</h2>
+      <div class="story_telling">
+        <p>En reconversion professionnelle en tant que Développeur Fullstack Javascript, je suis captivé par la force du
+          code et la possibilité de créer des expériences numériques interactives inédites. Le code devient pour moi un
+          support où mes idées prennent vie en cohésion avec l'innovation technologique. De plus, j'ai choisi le métier
+          de Développeur Fullstack Javascript, car il permet de toucher à tous les aspects de la création et la gestion
+          d'un site et d'une application web. </p>
+        <p>Par le passé, en tant que Directeur artistique pour la marque de prêt-à-porter Ozes Store, j'ai eu l'occasion
+          de réaliser l'entièreté de leurs productions graphiques, web (en utilisant un CMS) ainsi que le contenu des
+          réseaux sociaux. Mon parcours de designer apporte une touche unique à ma nouvelle carrière de développeur
+          fullstack. Grâce à ma fibre artistique et mon souci du détail, je pourrai travailler au développement
+          d'interfaces élégantes, fluides et efficaces, au profit des utilisateurs. J'ai le goût du travail organisé et avec des objectifs clairs.</p>
+      </div>
+      <p> Pour résumer, je sais gérer l'intégralité de la mise en oeuvre, de la gestion front et back end d'une
+        application web et web mobile. Mon profil de Designer sera un atout pour votre entreprise. Aujourd'hui la
+        création de sites internet et d'applications mobile est étroitement liée au design de leur interface.</p>
+    </section>
+
+    <!-- ------------------------CONTACT------------------------- -->
+
+    <section id="contact">
+      <h2 class="contact_title">Contactez-moi !</h2>
+      <div class="div_flex">
+        <img class="timer" id="call_me" src="./assets/images/contenu/Timer.png" alt="pictogramme d'horloge" />
+        <img class="timer_clock_hand" src="./assets/images/contenu/TimerClockHand.png" alt="pictogramme d'horloge" />
+        <a href="./assets/images/contenu/Sylvain_Zoogones_-_CV_Developpeur.pdf"><img class="photo"
+            src="./assets/images/contenu/photo_sz.png" alt="photo de sylvain" /></a>
+        <p id="CV">CV</p>
+        <a class="btn picto_contact_phone" href="tel:+33646607754"><i class="fa-solid fa-phone fa-lg"></i></a>
+        <a class="btn picto_contact_mail" href="mailto:sylvain.zoogones@gmail.com"><i
+            class="fa-solid fa-envelope fa-lg"></i></a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+
+    <a href="https://www.linkedin.com/in/sylvain-zoogones-6b1a418b" target="_blank"><img
+        src="./assets/images/picto_perso/logo_linkedin.png" /></a>
+    <a href="index.html"><img src="./assets/images/picto_perso/Logo.png" /></a>
+    <a href="https://www.behance.net/Sylvainz" target="_blank"><img
+        src="./assets/images/picto_perso/logo_behance.png" /></a>
+
+  </footer>
+
+  <script src="script/script.js"></script>
+
+</body>
+
+</html>

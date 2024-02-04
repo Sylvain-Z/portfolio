@@ -1,0 +1,61 @@
+/* DESKTOP */
+
+@media screen and (min-width: 1201px) {
+
+    /* GENERAL */
+
+    header {
+        background-position: -0px -300px;
+    }
+
+    .logoETnav {
+        width: 90%;
+        margin: 0 auto;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: first baseline;
+    }
+
+    .divlogo_header {
+        margin: 0;
+        /* annule la marge du style-tablet */
+    }
+
+    nav {
+        margin: 0;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    /* PROJETS */
+
+    .project_card {
+        width: 32%;
+    }
+
+    /* MON HISTOIRE */
+
+    #journey {
+        width: auto;
+    }
+
+    .story_telling p {
+        width: 75%;
+    }
+
+    /* COMPETENCES */
+
+    /* TOUTES MES COMPETENCES */
+
+    .skills_list {
+        width: 90%;
+    }
+    .skill_card {
+        width: 340px;
+        height: 340px;
+    }
+    .recto h3 {
+        line-height: 340px; /* = .skill_card : height */
+    }
+
+}
