@@ -247,6 +247,7 @@ nav a:hover {
     color: var(--Yellow);
     background-color: var(--backGDarker-deco);
 }
+
 header h2 {
     text-align: left;
     font-size: 20px;
@@ -257,6 +258,7 @@ header h2 {
     bottom: 10px;
     background-color: var(--backGDarker-deco);
 }
+
 .citation {
     width: 80%;
     margin: auto;
@@ -269,19 +271,23 @@ footer {
     background-image: url('../assets/images/contenu/Fond.jpg');
     width: 100%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-around;
     white-space: wrap;
     padding: 5% 10%;
 }
 
-footer a {
+footer img {
     width: 25px;
+    color: var(--Yellow);
 }
-
-footer img,
-footer .fa-envelope,
-footer .fa-phone {
-    width: 100%;
+footer > a {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+footer > a:visited {
+    color: var(--Yellow);
 }
 
 .main_page {
@@ -359,20 +365,29 @@ h3 {
 }
 
 .button,
-.button_book {
+.button_book,
+.button_contact {
     font-family: 'NeutraText';
     text-transform: capitalize;
     color: var(--Black);
     text-align: center;
-    margin: 50px 0;
     padding: 10px 25px;
     background-color: var(--Yellow);
     border: 1px solid var(--Yellow);
     /* sans ça le hover fait redimensionner l'élément */
 }
 
+.button_book {
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+.button_contact {
+    margin-bottom: 50px;
+}
+
 .button:hover,
-.button_book:hover {
+.button_book:hover,
+.button_contact:hover {
     border: 1px solid var(--Yellow);
     color: var(--Yellow);
     background-color: transparent;
@@ -397,12 +412,19 @@ h4 {
     background-color: var(--White);
 }
 
-.technologies {
+.technologies, .technologies-citation {
     width: 100%;
     display: flex;
     justify-content: center;
     justify-content: space-around;
     margin-top: 25px;
+}
+.technologies-citation {
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.technologies-citation > img {
+    margin: 0 25px;
 }
 
 .dev,
@@ -550,22 +572,25 @@ h4 {
 }
 
 
-/* HISTOIRE */
+/* HISTOIRE + PAGE CGU*/
 
-#journey {
-    background-image: url('./images/contenu/Fond.jpg');
+#journey, .CGU {
     margin: 50px auto;
     display: flex;
     flex-direction: column;
 }
 
 .story_telling p,
-#journey>p {
+#journey>p,
+.CGU p {
     width: 85%;
     margin: 25px auto;
     font-size: 18px;
     line-height: 30px;
     color: var(--White);
+}
+.CGU p {
+    margin: 10px auto;
 }
 
 #journey>p {
@@ -591,11 +616,13 @@ h4 {
     margin: auto;
 }
 
-.timer, .timer_clock_hand {
+.timer,
+.timer_clock_hand {
     display: block;
     width: 100%;
     /* 350px du .div_flex */
 }
+
 .timer_clock_hand {
     position: absolute;
     top: 0;

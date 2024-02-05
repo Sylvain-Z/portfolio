@@ -48,6 +48,10 @@
         bottom: 75px;
     }
 
+    footer {
+        flex-direction: row;
+    }
+
     /* PROJETS */
 
     .flex_grid {
@@ -57,6 +61,13 @@
 
     .project_card {
         width: 50%;
+    }
+
+    /* HISTOIRE + PAGE CGU*/
+
+    .CGU p {
+        width: 50%;
+        font-size: 20px;
     }
 
 
