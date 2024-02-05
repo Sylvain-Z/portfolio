@@ -415,7 +415,7 @@ h4 {
 .technologies, .technologies-citation {
     width: 100%;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     justify-content: space-around;
     margin-top: 25px;
 }
