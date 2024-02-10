@@ -28,11 +28,17 @@
     /* GENERAL */
 
     header {
-        background-position: -0px -200px;
+        height: auto;
+        background-size: 200px;
+        background-position: 50% 70%;
+    }
+
+    .header_principal {
+        align-items: end;
     }
 
     .shadow_header {
-        height: 200px;
+        height: 190px;
         background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(43, 43, 43, 0));
     }
 
@@ -45,23 +51,34 @@
     }
 
     .divlogo_header {
-        margin: 0;
-        /* annule la marge du style-tablet */
+        margin: 0; /* annule la marge du style-tablet */
     }
 
     nav {
-        height: 50px;
-        /* enlève l'effet de bord de la height du header */
         margin: 0;
         flex-direction: row;
         justify-content: flex-end;
     }
-    
-    header h2 {
-        font-size: 40px;
+
+    .presentation {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
     }
+    header h2 {
+        width: auto;
+        margin: 0 50px 0 -50px;
+    }
+
+    .technologies-header {
+        margin: 0 0 0 50px;
+    }
+
     .citation {
         font-size: 25px;
+        margin-top: 50px;
     }
 
 
@@ -94,7 +111,6 @@
         width: 40%;
         height: 40%;
     }
-
 
     /* TOUTES MES COMPETENCES */
 
