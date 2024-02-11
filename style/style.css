@@ -459,9 +459,8 @@ h4 {
     height: 35px;
 }
 
-
-.technologies-header > .merge_logo {
-    margin-right: 25px;
+.technologies > .merge_logo {
+    margin: 0;
 }
 .merge_logo {
     position: relative;
@@ -596,7 +595,7 @@ h4 {
     right: 25px;
 }
 
-.hidenList {
+.hiddenList {
     display: none;
 }
 
@@ -709,6 +708,6 @@ h4 {
 
 }
 
-.hiden {
+.hidden {
     display: none;
 }

@@ -50,7 +50,7 @@ function hideContent() {
 function showList() {
     for (let i = 0; i < skillsIllustration.length; i++) {
         skillsIllustration[i].addEventListener('click', () => {
-            skillsList[i].classList.remove('hidenList');
+            skillsList[i].classList.remove('hiddenList');
             skillsShow[i].classList.remove('fa-solid', 'fa-chevron-down', 'fa-xl');
             skillsHide[i].classList.add('fa-solid', 'fa-chevron-up', 'fa-xl');
         });
@@ -59,7 +59,7 @@ function showList() {
 function hideList() {
     for (let i = 0; i < skillsIllustration.length; i++) {
         skillsList[i].addEventListener('click', () => {
-            skillsList[i].classList.add('hidenList');
+            skillsList[i].classList.add('hiddenList');
             skillsShow[i].classList.add('fa-solid', 'fa-chevron-down', 'fa-xl');
             skillsHide[i].classList.remove('fa-solid', 'fa-chevron-up', 'fa-xl');
         });
