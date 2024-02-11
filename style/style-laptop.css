@@ -51,7 +51,8 @@
     }
 
     .divlogo_header {
-        margin: 0; /* annule la marge du style-tablet */
+        margin: 0;
+        /* annule la marge du style-tablet */
     }
 
     nav {
@@ -61,24 +62,40 @@
     }
 
     .presentation {
-        width: 100%;
+        width: 80%;
+        margin: auto;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         margin-top: 50px;
     }
+
     header h2 {
         width: auto;
-        margin: 0 50px 0 -50px;
+        margin: 0;
     }
 
     .technologies-header {
-        margin: 0 0 0 50px;
+        margin: 0;
     }
 
-    .citation {
-        font-size: 25px;
+    .citation,
+    .citation2 {
         margin-top: 50px;
+        text-align: center;
+    }
+
+    .citation2 {
+        margin-top: 0px;
+    }
+
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    footer div {
+        margin-bottom: 0;
     }
 
 
@@ -101,10 +118,10 @@
 
     /* COMPETENCES */
 
-    .dev,
+    .logo,
     .merge_logo {
-        width: 60px;
-        height: 60px;
+        width: 45px;
+        height: 45px;
     }
 
     .merge_logo2 {

@@ -30,6 +30,9 @@ function displayHeader() {
                 <a href="portfolio.html#projects_ctn">
                     <p>Projets</p>
                 </a>
+                <a href="portfolio.html#skills">
+                    <p>Compétences</p>
+                </a>
                 <a href="portfolio.html#journey">
                     <p>Histoire</p>
                 </a>
@@ -47,14 +50,17 @@ function displayHeader() {
             <h2>Bienvenue sur mon profil</h2>
 
             <div class="technologies-header">
-                <img class="dev" src="./assets/images/logos/icons8-react-native-256.png" alt="logo react" title="react" />
+                <img class="logo" src="./assets/images/logos/icons8-react-native-256.png" alt="logo react" title="react" />
                 <div class="merge_logo">
-                <img class="dev merge_logo1" src="./assets/images/logos/icons8-nodejs-240.png" alt="logo node"
+                <img class="logo merge_logo1" src="./assets/images/logos/icons8-nodejs-240.png" alt="logo node"
                     title="node.js" />
-                <img class="dev merge_logo2" src="./assets/images/logos/icons8-nodejs-256.png" alt="logo node js"
+                <img class="logo merge_logo2" src="./assets/images/logos/icons8-nodejs-256.png" alt="logo node js"
                     title="node.js" />
                 </div>
-                <img class="dev" src="./assets/images/logos/icons8-logo-de-mysql-240.png" alt="logo mysql" title="mysql" />
+                <img class="logo" src="./assets/images/logos/icons8-logo-de-mysql-240.png" alt="logo mysql" title="mysql" />
+                <img class="logo" src="./assets/images/logos/icons8-photoshop-240.png" alt="logo photoshop" title="Photoshop" />
+                <img class="logo" src="./assets/images/logos/icons8-adobe-illustrator-240.png" alt="logo illustrator" title="Illustrator" />
+                <img class="logo" src="./assets/images/logos/icons8-adobe-indesign-240.png" alt="logo indesign" title="Indesign" />
             </div>
         </div>
             

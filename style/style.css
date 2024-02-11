@@ -261,12 +261,15 @@ header h2 {
     background-color: var(--backGDarker-deco);
 }
 
-.citation {
+.citation, .citation2 {
     width: 80%;
     margin: auto;
     font-size: 20px;
     color: var(--White);
     margin-bottom: 50px;
+}
+.citation {
+    margin-bottom: 0px;
 }
 
 .bordure {
@@ -281,20 +284,25 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    white-space: wrap;
     padding: 5% 10%;
+}
+footer div {
+    width: 70%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
 footer img {
     width: 25px;
-    color: var(--Yellow);
 }
-footer > a {
+footer a {
+    color: var(--Yellow);
     font-size: 18px;
     margin-bottom: 25px;
 }
-footer > a:visited {
+footer a:visited {
     color: var(--Yellow);
 }
 
@@ -404,6 +412,12 @@ h3 {
     background-color: transparent;
 }
 
+.disabled:hover {
+    color: var(--White);
+    background-color : rgb(175, 175, 175);
+    border: 1px solid rgb(175, 175, 175);
+}
+
 
 /* COMPETENCES */
 
@@ -426,6 +440,7 @@ h4 {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: space-around;
     margin-top: 25px;
 }
@@ -435,15 +450,19 @@ h4 {
     margin: 25px;
 }
 .technologies-header > img {
-    margin: 0 25px;
+    margin: 0 25px 25px 0;
 }
 
-.dev,
+.logo,
 .merge_logo {
     width: 35px;
     height: 35px;
 }
 
+
+.technologies-header > .merge_logo {
+    margin-right: 25px;
+}
 .merge_logo {
     position: relative;
 }

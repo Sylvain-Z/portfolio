@@ -40,6 +40,7 @@
         height: 150px;
         background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(43, 43, 43, 0));
     }
+
     .name_header {
         font-size: 25px;
         margin: -30px 0 0 0;
@@ -51,6 +52,7 @@
         justify-content: center;
         margin: 0px auto;
     }
+
     .presentation {
         width: 100%;
         display: flex;
@@ -58,16 +60,22 @@
         justify-content: space-between;
         margin-top: 50px;
     }
+
     header h2 {
         margin-top: 0px;
     }
-    
-    .technologies-header {
-        margin-right: 75px;
+
+    .technologies-header>img {
+        margin: 0 0 0 25px;
     }
 
-    footer {
+    .technologies-header>.merge_logo {
+        margin: 0 0 0 25px;
+    }
+
+    footer div {
         flex-direction: row;
+        margin-bottom: 25px;
     }
 
     /* PROJETS */
