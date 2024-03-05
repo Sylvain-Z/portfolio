@@ -39,12 +39,17 @@
     .skills_list {
         width: 90%;
     }
+
     .skill_card {
         width: 340px;
         height: 340px;
     }
+
     .recto h3 {
-        line-height: 340px; /* = .skill_card : height */
+        line-height: 340px;
+        /* = .skill_card : height */
     }
+
+
 
 }

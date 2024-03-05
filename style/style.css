@@ -191,10 +191,12 @@ header {
     padding: 25px 0 0 0;
     z-index: 1;
 }
-.header_principal { /* Pour dissocier la "légende du header de la nav */
+
+.header_principal {
+    /* Pour dissocier la "légende du header de la nav */
     display: flex;
     flex-direction: column;
-    
+
 }
 
 .shadow_header {
@@ -261,13 +263,15 @@ header h2 {
     background-color: var(--backGDarker-deco);
 }
 
-.citation, .citation2 {
+.citation,
+.citation2 {
     width: 80%;
     margin: auto;
     font-size: 20px;
     color: var(--White);
     margin-bottom: 50px;
 }
+
 .citation {
     margin-bottom: 0px;
 }
@@ -286,8 +290,9 @@ footer {
     align-items: center;
     padding: 5% 10%;
 }
+
 footer div {
-    width: 70%; 
+    width: 70%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -297,11 +302,13 @@ footer div {
 footer img {
     width: 25px;
 }
+
 footer a {
     color: var(--Yellow);
     font-size: 18px;
     margin-bottom: 25px;
 }
+
 footer a:visited {
     color: var(--Yellow);
 }
@@ -390,16 +397,19 @@ h3 {
     text-align: left;
     padding: 10px 25px;
     background-color: var(--Yellow);
-    border: 1px solid var(--Yellow); /* sans ça le hover fait redimensionner l'élément */
+    border: 1px solid var(--Yellow);
+    /* sans ça le hover fait redimensionner l'élément */
 }
 
 .button {
     margin-bottom: 25px;
 }
+
 .button_book {
     margin-top: 50px;
     margin-bottom: 25px;
 }
+
 .button_contact {
     margin-bottom: 50px;
 }
@@ -414,7 +424,7 @@ h3 {
 
 .disabled:hover {
     color: var(--White);
-    background-color : rgb(175, 175, 175);
+    background-color: rgb(175, 175, 175);
     border: 1px solid rgb(175, 175, 175);
 }
 
@@ -431,12 +441,14 @@ h4 {
     display: flex;
     flex-direction: column;
     margin: auto;
-    margin-top: -25px; /* sert à coller les blocs compétences au projet précédent */
+    margin-top: -25px;
+    /* sert à coller les blocs compétences au projet précédent */
     padding: 25px;
     background-color: var(--White);
 }
 
-.technologies, .technologies-header {
+.technologies,
+.technologies-header {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -444,12 +456,14 @@ h4 {
     justify-content: space-around;
     margin-top: 25px;
 }
+
 .technologies-header {
     width: auto;
     justify-content: left;
     margin: 25px;
 }
-.technologies-header > img {
+
+.technologies-header>img {
     margin: 0 25px 25px 0;
 }
 
@@ -459,9 +473,10 @@ h4 {
     height: 35px;
 }
 
-.technologies > .merge_logo {
+.technologies>.merge_logo {
     margin: 0;
 }
+
 .merge_logo {
     position: relative;
     margin: 0 25px 25px 0;
@@ -541,8 +556,10 @@ h4 {
 }
 
 .recto h3 {
-    margin: 0; /* réinitialise la margin du h3 général */
-    line-height: 340px; /* = .skill_card : height */
+    margin: 0;
+    /* réinitialise la margin du h3 général */
+    line-height: 340px;
+    /* = .skill_card : height */
     background-color: var(--backGDarker-deco);
     z-index: 10;
 }
@@ -602,7 +619,8 @@ h4 {
 
 /* HISTOIRE + PAGE CGU*/
 
-#journey, .CGU {
+#journey,
+.CGU {
     margin: 50px auto;
     display: flex;
     flex-direction: column;
@@ -617,6 +635,7 @@ h4 {
     line-height: 30px;
     color: var(--White);
 }
+
 .CGU p {
     margin: 10px auto;
 }
@@ -647,7 +666,8 @@ h4 {
 .timer,
 .timer_clock_hand {
     display: block;
-    width: 100%; /* width du .div_flex */
+    width: 100%;
+    /* width du .div_flex */
 }
 
 .timer_clock_hand {
@@ -706,6 +726,34 @@ h4 {
         7px 7px 10px 0 rgba(0, 0, 0, 0.2);
     ;
 
+}
+
+/* Maquettes html */
+
+.maquettesHtml-ctn {
+    width: 80%;
+    margin: auto;
+}
+
+.maquettesHtml-ctn h3 {
+    color: var(--White);
+}
+
+.maquettesHtml-img {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.maquettesHtml-img img {
+    width: 100%;
+    margin-bottom: 25px;
+    box-shadow: 0 0 10px 5px var(--backGDarker-deco);
+}
+
+.maquettesHtml-legende {
+    color: var(--White);
+    margin-bottom: 50px;
 }
 
 .hidden {
