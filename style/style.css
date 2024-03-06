@@ -4,6 +4,7 @@
     --Black: rgb(20, 20, 20);
     --Yellow: rgb(204, 158, 53);
     --Green: rgb(29, 146, 0);
+    --Red: rgb(155, 0, 0);
 
     --backG-deco: rgba(0, 0, 0, 0.2);
     --backGDarker-deco: rgba(0, 0, 0, 0.7);
@@ -555,14 +556,26 @@ h4 {
     background-image: url('../assets/images/contenu/SkillsSoft.jpg');
 }
 
-.recto h3 {
+#veille-recto {
+    background-image: url('../assets/images/contenu/SkillsVeille.jpg');
+}
+
+.skill_card-title-div {
+    height: 340px;
+    /* = .skill_card : height*/
+    background-color: var(--backGDarker-deco);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.skill_card-title {
     margin: 0;
     /* réinitialise la margin du h3 général */
-    line-height: 340px;
-    /* = .skill_card : height */
-    background-color: var(--backGDarker-deco);
     z-index: 10;
+    font-family: 'Caviar Dreams Bold';
 }
+
 
 .verso {
     position: absolute;
@@ -576,23 +589,24 @@ h4 {
     background-color: var(--backGDarker-deco);
     color: var(--White);
     z-index: 20;
+    text-align: center;
+}
+
+.verso ul {
+    margin-bottom: 15px;
 }
 
 .verso p {
     font-family: 'NeutraText Bold';
     color: var(--Yellow);
-}
-
-.verso p,
-.verso ul,
-.verso li {
     font-size: 20px;
-    margin: 5px 0;
-    text-align: center;
+    margin-bottom: 10px;
 }
 
 .verso li {
     list-style: none;
+    font-size: 18px;
+    margin-bottom: 5px;
 }
 
 .skillsShow,
@@ -611,6 +625,18 @@ h4 {
     bottom: 35px;
     right: 25px;
 }
+
+.Yt-link {
+    color: var(--White);
+    background: var(--Red);
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+.Yt-li {
+    margin: 15px 0 !important;
+}
+
 
 .hiddenList {
     display: none;
