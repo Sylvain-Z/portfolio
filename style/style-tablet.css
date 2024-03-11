@@ -111,6 +111,16 @@
         margin: 5px 5px 5px 5px;
     }
 
+    /* HORLOGE/CONTACT ------------------------------------------------------*/
+    .web3forms-form p {
+        width: 80%;
+        margin: 25px auto;
+    }
+
+    input,
+    textarea {
+        width: 80%;
+    }
 
     /* Maquettes html */
 

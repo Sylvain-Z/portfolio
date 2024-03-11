@@ -44,4 +44,15 @@
         width: 340px;
         height: 340px;
     }
+
+    /* HORLOGE/CONTACT ------------------------------------------------------*/
+    .web3forms-form p {
+        width: 50%;
+        margin: 25px auto;
+    }
+
+    input,
+    textarea {
+        width: 50%;
+    }
 }
