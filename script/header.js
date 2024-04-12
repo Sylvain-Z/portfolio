@@ -50,17 +50,17 @@ function displayHeader() {
             <h2>Bienvenue sur mon profil</h2>
 
             <div class="technologies-header">
+                <img class="logo" src="./assets/images/logos/icons8-javascript-256.png" alt="logo react" title="javascript" />
                 <img class="logo" src="./assets/images/logos/icons8-react-native-256.png" alt="logo react" title="react" />
                 <div class="merge_logo">
-                <img class="logo merge_logo1" src="./assets/images/logos/icons8-nodejs-240.png" alt="logo node"
+                <img class="logo merge_logo1" src="./assets/images/logos/icons8-nodejs-240-blanc.png" alt="logo node"
                     title="node.js" />
                 <img class="logo merge_logo2" src="./assets/images/logos/icons8-nodejs-256.png" alt="logo node js"
                     title="node.js" />
                 </div>
                 <img class="logo" src="./assets/images/logos/icons8-logo-de-mysql-240.png" alt="logo mysql" title="mysql" />
-                <img class="logo" src="./assets/images/logos/icons8-photoshop-240.png" alt="logo photoshop" title="Photoshop" />
-                <img class="logo" src="./assets/images/logos/icons8-adobe-illustrator-240.png" alt="logo illustrator" title="Illustrator" />
-                <img class="logo" src="./assets/images/logos/icons8-adobe-indesign-240.png" alt="logo indesign" title="Indesign" />
+                <img class="logo" src="./assets/images/logos/icons8-toupet-240.png" alt="logo photoshop" title="scss" />
+                <img class="logo" src="./assets/images/logos/icons8-docker-144.png" alt="logo docker" title="docker" />
             </div>
         </div>
             
