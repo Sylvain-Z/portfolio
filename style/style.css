@@ -8,6 +8,7 @@
 
     --backG-deco: rgba(0, 0, 0, 0.2);
     --backGDarker-deco: rgba(0, 0, 0, 0.7);
+    --backGDarkerPlus-deco: rgba(0, 0, 0, 0.9);
 }
 
 @font-face {
@@ -535,8 +536,12 @@ h4 {
     background-image: url('../assets/images/contenu/SkillsDesign.jpg');
 }
 
-#dev-recto {
-    background-image: url('../assets/images/contenu/SkillsDev.jpg');
+#devprincipal-recto {
+    background-image: url('../assets/images/contenu/SkillsDevFront.jpg');
+}
+
+#devnotions-recto {
+    background-image: url('../assets/images/contenu/SkillsDevBack.jpg');
 }
 
 #devPlus-recto {
@@ -587,7 +592,7 @@ h4 {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: var(--backGDarker-deco);
+    background-color: var(--backGDarkerPlus-deco);
     color: var(--White);
     z-index: 20;
     text-align: center;
