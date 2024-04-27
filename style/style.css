@@ -344,6 +344,44 @@ h3 {
     justify-content: center;
 }
 
+.project_card_solo {
+    width: 90%;
+    margin: 0 auto 50px auto;
+    background-color: var(--White);
+    padding: 25px 25px 0 25px;
+}
+.project_card_solo .technologies {
+    margin: 0;
+}
+.project_card_solo h2 {
+    margin: 0 0 25px 0;
+}
+.project_card_solo h3 {
+    margin-top: 0;
+}
+.project_card_solo-ctn {
+    display: flex;
+    flex-direction: column;
+}
+.project_card_solo-title {
+    font-family: 'Caviar Dreams Bold';
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+.project_card_solo li {
+    list-style: none;
+    line-height: 30px;
+}
+.project_card_solo li::before {
+    content: "· ";
+}
+.project_card_solo li,
+.project_card_solo h4,
+.project_card_solo h5 {
+    margin-bottom: 25px;
+}
+
+
 .project {
     display: flex;
     flex-direction: column;
@@ -513,9 +551,9 @@ h4 {
     margin: auto;
 }
 
-.skill_card {
+.skill_card,
+.project_description-list {
     position: relative;
-    background-color: var(--Yellow);
     width: 340px;
     height: 340px;
     margin-bottom: 25px;

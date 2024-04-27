@@ -24,6 +24,10 @@
         width: 32%;
     }
 
+    .project_card_solo {
+        width: 65%;
+    }
+
     /* MON HISTOIRE */
 
     #journey {

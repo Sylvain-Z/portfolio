@@ -86,10 +86,14 @@
     }
 
     .project_card {
-        width: 50%;
+        width: 45%;
     }
 
+    .project_card_solo {
+        width: 80%;
+    }
 
+    
     /* HISTOIRE + PAGE CGU*/
 
     .CGU p {
