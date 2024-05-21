@@ -58,6 +58,8 @@ function displayHeader() {
                 <img class="logo merge_logo2" src="./assets/images/logos/icons8-nodejs-256.png" alt="logo node js"
                     title="node.js" />
                 </div>
+                <img class="logo" src="./assets/images/logos/icons8-angular-96.png" alt="logo angular" title="angular" />
+                <img class="logo" src="./assets/images/logos/icons8-logo-de-printemps-144.png" alt="logo logo spring boot" title="Spring Boot" />
                 <img class="logo" src="./assets/images/logos/icons8-logo-de-mysql-240.png" alt="logo mysql" title="mysql" />
                 <img class="logo" src="./assets/images/logos/icons8-toupet-240.png" alt="logo photoshop" title="scss" />
                 <img class="logo" src="./assets/images/logos/icons8-docker-144.png" alt="logo docker" title="docker" />
