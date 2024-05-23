@@ -325,6 +325,7 @@ footer a:visited {
 
 /* PROJETS */
 
+
 h3 {
     color: var(--Yellow);
     font-size: 20px;
@@ -427,19 +428,43 @@ h3 {
     display: none;
 }
 
+
+
 .button,
 .button_book,
 .button_contact,
+.github-btn,
 form button {
     display: inline-block;
     font-family: 'NeutraText';
     text-transform: capitalize;
     color: var(--Black);
     text-align: left;
-    padding: 10px 25px;
+    padding: 5px 15px;
     background-color: var(--Yellow);
     border: 1px solid var(--Yellow);
     /* sans ça le hover fait redimensionner l'élément */
+}
+
+.github-figure{
+    position: relative;
+    margin-top: 25px;
+}
+.github-figure:hover{
+    transform: scale(1.02);
+}
+.github-img {
+    display: block;
+    width: 100px;
+    margin: auto;
+}
+.github-btn {
+    position: absolute;
+    width: 150px;
+    bottom: -15px;
+    left: -25px;
+    padding: 5px 15px;
+    color: var(--Black) !important;
 }
 
 .button {
@@ -447,7 +472,7 @@ form button {
 }
 
 .button_book {
-    margin-top: 50px;
+    margin-top: 35px;
     margin-bottom: 25px;
 }
 
@@ -461,6 +486,7 @@ form button {
     border: 1px solid var(--Yellow);
     color: var(--Yellow);
     background-color: transparent;
+    transform: scale(1.02);
 }
 
 .disabled:hover {
