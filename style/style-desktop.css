@@ -20,12 +20,8 @@
 
     /* PROJETS */
 
-    .project_card {
+    .card_div {
         width: 32%;
-    }
-
-    .project_card_solo {
-        width: 65%;
     }
 
     /* MON HISTOIRE */

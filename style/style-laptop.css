@@ -111,17 +111,9 @@
 
     /* PROJETS */
 
-    .project_card {
+    .card_div {
         width: 30%;
     }
-    .project_card_solo-ctn {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .project_card_solo-colonne {
-        width: 48%;
-    }
-
     
     /* COMPETENCES */
 
