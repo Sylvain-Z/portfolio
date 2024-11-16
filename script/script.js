@@ -66,6 +66,48 @@ function hideList() {
     }
 }
 
+/* COUNTDOWN */
+
+function Countdown() {
+    const targetTimestamp = new Date("2025-09-12T00:00:00").getTime(); // Date cible en timestamp
+    const currentTimestamp = Date.now(); // Date actuelle en timestamp
+    const difference = targetTimestamp - currentTimestamp;
+  
+    if (difference <= 0) {
+      document.getElementById("countdown-display").innerHTML = "The countdown is complete!";
+      clearInterval(interval);
+      return;
+    }
+  
+    const seconds = Math.floor((difference / 1000) % 60);
+    const minutes = Math.floor((difference / (1000 * 60)) % 60);
+    const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    const months = Math.floor(days / 30.44); // Approximation : 30.44 jours/mois
+    const remainingDays = days % 30.44;
+  
+    // Fonction pour ajouter un zéro si la valeur est inférieure à 10
+    const formatNumber = (number) => (number < 10 ? `0${number}` : number);
+  
+    document.getElementById("countdown-months").innerHTML = `
+      ${formatNumber(months)}
+    `;
+    document.getElementById("countdown-days").innerHTML = `
+      ${formatNumber(Math.floor(remainingDays))}
+    `;
+    document.getElementById("countdown-hours").innerHTML = `
+      ${formatNumber(hours)}
+    `;
+    document.getElementById("countdown-minutes").innerHTML = `
+      ${formatNumber(minutes)}
+    `;
+    document.getElementById("countdown-seconds").innerHTML = `
+      ${formatNumber(seconds)}
+    `;
+  }
+  
+  // Met à jour le compte à rebours chaque seconde
+  const interval = setInterval(Countdown, 1000);
 
 /************************************************************************************/
 /* ******************************** CODE PRINCIPAL **********************************/

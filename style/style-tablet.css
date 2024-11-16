@@ -85,14 +85,9 @@
         flex-wrap: wrap;
     }
 
-    .project_card {
+    .card_div {
         width: 45%;
     }
-
-    .project_card_solo {
-        width: 80%;
-    }
-
     
     /* HISTOIRE + PAGE CGU*/
 

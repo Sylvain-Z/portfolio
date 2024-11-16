@@ -5,6 +5,11 @@
     --Yellow: rgb(204, 158, 53);
     --Green: rgb(29, 146, 0);
     --Red: rgb(155, 0, 0);
+    --PurpleDarker: rgb(43, 11, 50);
+    --PurpleGradientBkg: linear-gradient(50deg, var(--PurpleDarker), rgba(255, 255, 255, 0) 90.71%),
+        linear-gradient(200deg, var(--PurpleDarker), rgba(255, 255, 255, 0) 30.71%),
+        linear-gradient(127deg, var(--PurpleDarker), rgba(255, 255, 255, 0) 70.71%),
+        linear-gradient(336deg, var(--PurpleDarker), rgba(255, 255, 255, 0) 95.71%);
 
     --backG-deco: rgba(0, 0, 0, 0.2);
     --backGDarker-deco: rgba(0, 0, 0, 0.7);
@@ -242,6 +247,7 @@ nav {
     font-family: 'Caviar Dreams Bold';
     text-transform: uppercase;
     text-align: center;
+    flex-wrap: wrap;
 }
 
 nav a {
@@ -332,10 +338,20 @@ h3 {
     margin: 25px 0;
 }
 
-#projects_ctn {
+.card_ctn {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 100px;
+}
+.radius-top {
+    border-radius: 15px 15px 0 0;
+}
+.radius-bottom {
+    border-radius: 0 0 15px 15px;
+}
+.radius-both {
+    border-radius: 15px 15px 15px 15px;
 }
 
 .flex_grid {
@@ -345,72 +361,35 @@ h3 {
     justify-content: center;
 }
 
-.project_card_solo {
-    width: 90%;
-    margin: 0 auto 50px auto;
-    background-color: var(--White);
-    padding: 25px 25px 0 25px;
-}
-.project_card_solo .technologies {
-    margin: 0;
-}
-.project_card_solo h2 {
-    margin: 0 0 25px 0;
-}
-.project_card_solo h3 {
-    margin-top: 0;
-}
-.project_card_solo-ctn {
-    display: flex;
-    flex-direction: column;
-}
-.project_card_solo-title {
-    font-family: 'Caviar Dreams Bold';
-    text-transform: uppercase;
-    margin-bottom: 25px;
-}
-.project_card_solo li {
-    list-style: none;
-    line-height: 30px;
-}
-.project_card_solo li::before {
-    content: "· ";
-}
-.project_card_solo li,
-.project_card_solo h4,
-.project_card_solo h5 {
-    margin-bottom: 25px;
-}
-
-
-.project {
+.card {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 90%;
+    min-height: 225px;
     margin: 25px auto;
     background-color: var(--White);
     padding-bottom: 25px;
 }
 
-.project:hover {
+.card:hover {
     transform: scale(1.02, 1.02);
     box-shadow: 0 0 10px 5px var(--Black);
 }
 
-.project img {
+.card img {
     width: 100%;
 }
 
-.project p,
-.project li {
+.card p,
+.card li {
     color: var(--Black);
     margin: 25px;
     font-family: 'NeutraText';
     list-style: none;
 }
 
-.project li {
+.card li {
     margin-left: 50px;
 }
 
@@ -426,6 +405,20 @@ h3 {
 
 .toggle {
     display: none;
+}
+.contentToToggle {
+    position: relative;
+    max-height: 300px;
+    overflow: scroll;
+    border-top: 1px solid var(--Yellow);
+    border-bottom: 1px solid var(--Yellow);
+    margin-top: 50px;
+}
+.scroll-icon {
+    position: absolute;
+    right: 20px;
+    top: 50px;
+    color: var(--Yellow);
 }
 
 
@@ -446,18 +439,21 @@ form button {
     /* sans ça le hover fait redimensionner l'élément */
 }
 
-.github-figure{
+.github-figure {
     position: relative;
     margin-top: 25px;
 }
-.github-figure:hover{
+
+.github-figure:hover {
     transform: scale(1.02);
 }
+
 .github-img {
     display: block;
     width: 100px;
     margin: auto;
 }
+
 .github-btn {
     position: absolute;
     width: 150px;
@@ -474,10 +470,6 @@ form button {
 .button_book {
     margin-top: 35px;
     margin-bottom: 25px;
-}
-
-.button_contact {
-    margin-bottom: 50px;
 }
 
 .button:hover,
@@ -503,7 +495,7 @@ h4 {
     font-size: 18px;
 }
 
-.skills {
+.skills, .countdown_ctn, .certified-ctn {
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -539,6 +531,7 @@ h4 {
     width: 35px;
     height: 35px;
 }
+
 .typescript {
     width: 30px;
     height: 30px;
@@ -586,8 +579,7 @@ h4 {
     margin: auto;
 }
 
-.skill_card,
-.project_description-list {
+.skill_card {
     position: relative;
     width: 340px;
     height: 340px;
@@ -615,6 +607,11 @@ h4 {
 
 #devnotions-recto {
     background-image: url('../assets/images/contenu/SkillsDevBack.jpg');
+}
+
+#Ops-recto {
+    background-image: url('../assets/images/contenu/Ops.jpg');
+    background-position: -55px 0;
 }
 
 #devPlus-recto {
@@ -898,6 +895,48 @@ textarea {
 .maquettesHtml-legende {
     color: var(--White);
     margin-bottom: 50px;
+}
+
+#countdown {
+    width: 80%;
+    margin: auto;
+    margin-top: 25px;
+}
+#month-days, #hours-minutes-seconds {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.countdown-one {
+    position: relative;
+    width: 75px;
+    height: 75px;
+    padding: 0;
+    margin: 5px;
+    border: 2px solid var(--Yellow);
+    border-radius: 50px;
+}
+.countdown-number {
+    line-height: 55px;
+    font-size: 18px;
+}
+.countdown-caption {
+    width: 90px;
+    padding: 5px 0;
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    transform: translate(-50%, 0);
+    background-color: var(--White);
+    font-size: 12px;
+}
+.certified {
+    text-align: center;
+    color: var(--Yellow);
+}
+.fa-graduation-cap {
+    margin: 25px auto;
+    color: var(--Yellow);
 }
 
 .hidden {
