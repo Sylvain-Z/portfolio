@@ -605,11 +605,12 @@ h4 {
     background-image: url('../assets/images/contenu/SkillsDevFront.jpg');
 }
 
-#devnotions-recto {
-    background-image: url('../assets/images/contenu/SkillsDevBack.jpg');
+#ai-recto {
+    background-image: url('../assets/images/contenu/SkillsAi.jpg');
+    background-position: 0 -100px;
 }
 
-#Ops-recto {
+#DevOps-recto {
     background-image: url('../assets/images/contenu/Ops.jpg');
     background-position: -55px 0;
 }
@@ -655,8 +656,6 @@ h4 {
 
 .verso {
     position: absolute;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     top: 0;
     bottom: 0;
@@ -666,6 +665,8 @@ h4 {
     color: var(--White);
     z-index: 20;
     text-align: center;
+    overflow: scroll;
+    padding: 50px 0;
 }
 
 .verso ul {
