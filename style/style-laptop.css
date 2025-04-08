@@ -114,6 +114,23 @@
     .card_div {
         width: 30%;
     }
+
+    .project_card_solo-ctn {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+ 
+    .project_card_solo-colonne {
+        width: 48%;
+    }
+
+    .popup_ctn {
+        top: 50px;
+        right: 100px;
+        bottom: 0;
+        left: 100px;
+        padding: 50px 20px 10px 20px;
+    }
     
     /* COMPETENCES */
 
