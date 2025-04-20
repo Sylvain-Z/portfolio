@@ -6,6 +6,7 @@
 
 
 /*  Projets  */
+
 const toggleShow = document.getElementsByClassName('toggleshow');
 const toggleHide = document.getElementsByClassName('toggleHide');
 const content = document.getElementsByClassName('contentToToggle');
@@ -17,7 +18,11 @@ const skillsList = document.getElementsByClassName('verso');
 const skillsShow = document.getElementsByClassName('skillsShow');
 const skillsHide = document.getElementsByClassName('skillsHide');
 
+/* Les popups */
 
+const popups = document.getElementsByClassName('popup_ctn');
+const openBtn = document.getElementsByClassName('openPopup_btn');
+const closeBtn = document.getElementsByClassName('closePopup_btn');
 
 /***********************************************************************************/
 /* ********************************** FONCTIONS ************************************/
@@ -43,6 +48,58 @@ function hideContent() {
             toggleShow[i].classList.add('fa-solid', 'fa-chevron-down', 'fa-xl');
         });
     }
+}
+
+/* TOGGLE POPUPS PROJECTS */
+
+function openPopUp() {
+    for (let i = 0; i < openBtn.length; i++) {
+      openBtn[i].addEventListener('click', () => {
+          popups[i].style.display = 'flex';
+          popups[i].classList.add("active");
+          document.body.classList.add("noscroll");
+
+          const defaultTab = popups[i].querySelector('.tab-button');
+          if (defaultTab) {
+            defaultTab.click();
+          }
+        });
+    }
+}
+function closePopUp() {
+    for (let i = 0; i < closeBtn.length; i++) {
+            closeBtn[i].addEventListener('click', () => {
+              popups[i].style.display = 'none';
+              popups[i].classList.remove("active");
+              document.body.classList.remove("noscroll");
+        });
+    }
+}
+
+function openTab(evt, tabId) {
+  const popupBox = evt.currentTarget.closest('.popup_box');
+
+  const tabs = popupBox.querySelectorAll('.tab-content');
+  const buttons = popupBox.querySelectorAll('.tab-button');
+
+  // Cacher tous les contenus
+  tabs.forEach(tab => {
+    tab.style.display = 'none';
+  });
+
+  // Retirer l'état actif de tous les boutons
+  buttons.forEach(btn => {
+    btn.classList.remove('active');
+  });
+
+  // Afficher l'onglet sélectionné
+  const selectedTabs = popupBox.querySelectorAll(`#${tabId}`);
+  selectedTabs.forEach(tab => {
+    tab.style.display = 'flex';
+  });
+
+  // Marquer le bouton comme actif
+  evt.currentTarget.classList.add('active');
 }
 
 /* TOGGLE SKILLS LIST */
@@ -117,6 +174,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     showContent();
     hideContent();
+    openPopUp();
+    closePopUp();
 
     showList();
     hideList();

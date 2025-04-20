@@ -130,7 +130,7 @@
         align-items: flex-start;
     }
 
-    .mobile img {
+    .mobile figure {
         width: 45%;
     }
 }

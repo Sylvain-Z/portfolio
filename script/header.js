@@ -27,7 +27,7 @@ function displayHeader() {
                 </div>
 
                 <nav>
-                <a href="portfolio.html#projects_ctn">
+                <a href="portfolio.html#projects">
                     <p>Projets</p>
                 </a>
                 <a href="portfolio.html#skills">

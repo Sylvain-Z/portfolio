@@ -115,12 +115,12 @@
         width: 30%;
     }
 
-    .project_card_solo-ctn {
+    .fonctionnalities-ctn {
         flex-direction: row;
         justify-content: space-between;
     }
  
-    .project_card_solo-colonne {
+    .fonctionnalities-colonne {
         width: 48%;
     }
 
@@ -129,7 +129,24 @@
         right: 100px;
         bottom: 0;
         left: 100px;
-        padding: 50px 20px 10px 20px;
+    }
+
+    .closePopup_btn {
+        top: 70px;
+        left: 130px;
+    }
+    
+    /* Maquettes html */
+
+    .maquettesHtml-img {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .mobile figure {
+        width: 24%;
     }
     
     /* COMPETENCES */
@@ -167,19 +184,6 @@
     input,
     textarea {
         width: 75%;
-    }
-
-    /* Maquettes html */
-
-    .maquettesHtml-img {
-        width: 100%;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
-
-    .mobile img {
-        width: 19%;
     }
 
 }

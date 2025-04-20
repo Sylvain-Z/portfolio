@@ -24,7 +24,7 @@
         width: 32%;
     }
 
-    .project_card_solo {
+    .fonctionnalities {
         width: 65%;
     }
 
@@ -33,7 +33,11 @@
         right: 200px;
         bottom: 0;
         left: 200px;
-        padding: 50px 20px 10px 20px;
+    }
+
+    .closePopup_btn {
+        top: 70px;
+        left: 230px;
     }
 
     /* MON HISTOIRE */
