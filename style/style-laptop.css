@@ -113,6 +113,7 @@
 
     .card_div {
         width: 30%;
+        max-width: 450px;
     }
 
     .fonctionnalities-ctn {
