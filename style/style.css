@@ -813,12 +813,26 @@ h4 {
     margin-bottom: 5px;
 }
 
+
+* { /* Firefox */ /* Couleur pour la barre du navigateur, appliqué partout */
+    scrollbar-width: thin; /* auto | thin | none */ /* Firefox */
+    scrollbar-color: var(--Yellow) var(--Black); /* thumb color | track color */ /* marche pour Chrome, Safari, Edge et Firefox */
+}
+
+.popup_ctn,
+.contentToToggle,
+.verso { /* Firefox */ /* Couleur différente pour ces éléments */
+    scrollbar-color: var(--Yellow) var(--White);
+}
+
+::-webkit-scrollbar,
 .popup_ctn::-webkit-scrollbar,
 .contentToToggle::-webkit-scrollbar,
-.verso::-webkit-scrollbar {  /* chrome, Safari, Edge */
+.verso::-webkit-scrollbar {  /* Chrome, Safari, Edge */
     width: 8px;
 }
 
+::-webkit-scrollbar-thumb,
 .popup_ctn::-webkit-scrollbar-thumb,
 .contentToToggle::-webkit-scrollbar-thumb,
 .verso::-webkit-scrollbar-thumb {
@@ -833,19 +847,6 @@ h4 {
 .verso::-webkit-scrollbar-thumb:hover {
     background-color: var(--Yellow);
 }
-
-.popup_ctn::-webkit-scrollbar,
-.contentToToggle::-webkit-scrollbar,
-.verso::-webkit-scrollbar {
-    display: none;
-  }
-
-.popup_ctn,
-.contentToToggle,
-.verso { /* Firefox */
-    scrollbar-width: thin; /* auto | thin | none */
-    scrollbar-color: var(--Yellow) transparent; /* thumb color | track color */
-  }
 
 .skillsShow,
 .skillsHide {
