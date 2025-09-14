@@ -124,6 +124,10 @@
         width: 48%;
     }
 
+    .tab-content, .fonctionnalities-ctnPopup {
+        width: 100%;
+    }
+
     .popup_ctn {
         top: 50px;
         right: 100px;

@@ -28,6 +28,10 @@
         width: 65%;
     }
 
+    .tab-content, .fonctionnalities-ctnPopup { /* classe commune avec fonctionnalities */
+        width: 100%;
+    }
+
     .popup_ctn {
         top: 50px;
         right: 200px;

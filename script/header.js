@@ -51,6 +51,7 @@ function displayHeader() {
 
             <div class="technologies-header">
                 <img class="logo" src="./assets/images/logos/icons8-javascript-256.png" alt="logo react" title="javascript" />
+                <img class="logo" src="./assets/images/logos/icons8-typescript-96.png" alt="logo typescript" title="typescript" />
                 <img class="logo" src="./assets/images/logos/icons8-react-native-256.png" alt="logo react" title="react" />
                 <div class="merge_logo">
                 <img class="logo merge_logo1" src="./assets/images/logos/icons8-nodejs-240-blanc.png" alt="logo node"
@@ -61,7 +62,6 @@ function displayHeader() {
                 <img class="logo" src="./assets/images/logos/icons8-angular-96.png" alt="logo angular" title="angular" />
                 <img class="logo" src="./assets/images/logos/icons8-logo-de-printemps-144.png" alt="logo logo spring boot" title="Spring Boot" />
                 <img class="logo" src="./assets/images/logos/icons8-logo-de-mysql-240.png" alt="logo mysql" title="mysql" />
-                <img class="logo" src="./assets/images/logos/icons8-toupet-240.png" alt="logo photoshop" title="scss" />
                 <img class="logo" src="./assets/images/logos/icons8-docker-144.png" alt="logo docker" title="docker" />
             </div>
         </div>

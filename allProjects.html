@@ -44,7 +44,8 @@
               <a class="button" href="https://app.qanswer.ai/">Qanswer</a>
               <a class="button" href="https://doc.qanswer.ai/" target="_blank">QanswerDoc</a>
               <i class="fa-solid fa-circle-down fa-xl scroll-icon"></i>
-              <p>Contrat d'alternance</p>
+              <p class="program_title1">Contrat d'alternance</p>
+              <p class="program_title1 diamondDivider">❖</p>
               <p>Développeur Frontend</p>
               <p>Il s'agit de l'entreprise qui me fait confiance pour me former lors de mon bachelor.</p>
               <p>Dans cette entreprise j'ai travaillé sur plusieurs applications web propriétaire.</p>
@@ -80,13 +81,11 @@
             <i class="fa-solid fa-chevron-down fa-xl toggleshow"></i>
             <i class="toggleHide"></i> <!-- affichage géré en JS -->
             <div class="contentToToggle toggle">
-
-              <!-- POPUP -->
-
-
-              <button class="popup_btn">Aperçu</button>
+              <!-- POPUP BOUTON -->
+              <button class="openPopup_btn">Aperçu</button>
               <i class="fa-solid fa-circle-down fa-xl scroll-icon"></i>
-              <p>Application de gestion des données du Covid-19.</p>
+              <p class="program_title1">Application de gestion des données du Covid-19.</p>
+              <p class="program_title1 diamondDivider">❖</p>
               <p>Réalisation d'un ETL.</p>
               <p>Nettoyage et analyse de données.</p>
               <p>Base de données avec Postgres et Dbeaver</p>
@@ -123,6 +122,128 @@
             </div>
           </section>
         </div>
+        <!-- ----------------------POPUP ASSOCIEE AU PROJET----------------------- -->
+        <div class="popup_ctn">
+          <div class="popup_box">
+            <button class="closePopup_btn">&times;</button>
+            <h2>CovIT</h2>
+
+            <!-- Onglets -->
+            <div class="tabs">
+              <button class="tab-button" onclick="openTab(event, 'tab1')">Fonctionnalités</button>
+              <button class="tab-button" onclick="openTab(event, 'tab2')">Laptop</button>
+            </div>
+            <div class="fonctionnalities tab-content" id="tab1">
+              <article class="fonctionnalities-ctn  fonctionnalities-ctnPopup">
+                <div class="fonctionnalities-colonne">
+                    <p>Partition de l'application pour 3 pays</p>
+                    <p class="fonctionnalities-title">❖ Suisse</p>
+                    <ul>
+                        <li>Traduction : Français, Italien, Allemand</li>
+                        <li>Prédiction IA</li>
+                    </ul>
+                    <p class="fonctionnalities-title">❖ France</p>
+                    <ul>
+                        <li>Français uniquement</li>
+                        <li>Prédiction IA</li>
+                        <li>Visualisation des données Iframe Grafana</li>
+                        <li>Filtres des données par pays et par métrique</li>
+                    </ul>
+                </div>
+                <div class="fonctionnalities-colonne">
+                  <p class="fonctionnalities-title">❖ USA</p>
+                  <ul>
+                      <li>Anglais uniquement</li>
+                      <li>Prédiction IA</li>
+                      <li>Visualisation des données Iframe Grafana</li>
+                      <li>Filtres des données par pays et par métrique</li>
+                  </ul>
+                  <p class="fonctionnalities-title">Data analystes privées</p>
+                    <ul>
+                        <li>Rôles utilisateurs et administrateur</li>
+                        <li>Gestion des données</li>
+                        <li>Ajout, Modification et suppression des données</li>
+                        <li>Lecture et Modification des informations personnelles</li>
+                        <li>Création et suppression de compte (Admin)</li>
+                        <li>Dump de la base de données</li>
+                    </ul>
+                </div>
+              </article>
+            </div>
+            <div class="maquettesHtml-img desktop tab-content" id="tab2">
+              <figure>
+                <figcaption>Page d'accueil</figcaption>
+                <img src="./assets/images/contenu/Covit/01_Choix_du_pays.jpg" alt="Page d'accueil CovIt"
+                  title="Desktop - Accueil - Choix du pays">
+              </figure>
+              <figure>
+                <figcaption>Page prédiction Suisse</figcaption>
+                <img src="./assets/images/contenu/Covit/02_Predict_Ch.jpg" alt="Page prédiction Suisse"
+                  title="Desktop - Prediction Suisse">
+              </figure>
+              <figure>
+                <figcaption>Page prédiction France</figcaption>
+                <img src="./assets/images/contenu/Covit/02_Predict_FR.jpg" alt="Page prédiction France"
+                  title="Desktop - Prediction France">
+              </figure>
+              <figure>
+                <figcaption>Page prédiction USA</figcaption>
+                <img src="./assets/images/contenu/Covit/02_Predict_USA.jpg" alt="Page prédiction USA"
+                  title="Desktop - Prediction USA">
+              </figure>
+              <figure>
+                <figcaption>Page prédiction USA réponse</figcaption>
+                <img src="./assets/images/contenu/Covit/02_Predict_USA_Prediction.jpg" alt="Page prédiction USA"
+                  title="Desktop - Prediction USA">
+              </figure>
+              <figure>
+                <figcaption>Visualisation des données USA</figcaption>
+                <img src="./assets/images/contenu/Covit/03_Dataviz_USA.jpg" alt="Page prédiction USA"
+                  title="Desktop - Prediction USA">
+              </figure>
+              <figure>
+                <figcaption>Tableau de bord gestion des données</figcaption>
+                <img src="./assets/images/contenu/Covit/04_DataManagement_USA.jpg" alt="Page dashboard"
+                  title="Desktop - Dashboard">
+              </figure>
+              <figure>
+                <figcaption>Formulaire d'ajout de données</figcaption>
+                <img src="./assets/images/contenu/Covit/05_DataManagement_AddData_USA.jpg" alt="Page dashboard ajouter des données"
+                  title="Desktop - Formulaire d'ajout de données">
+              </figure>
+              <figure>
+                <figcaption>Gestion des données Edition, Suppression</figcaption>
+                <img src="./assets/images/contenu/Covit/07_DataManagement_EditData_USA.jpg" alt="Page dashboard modifier des données"
+                  title="Desktop - Formulaire de modification des données">
+              </figure>
+              <figure>
+                <figcaption>Dump de données</figcaption>
+                <img src="./assets/images/contenu/Covit/10_DataManagement_DumpDB_Canceled_USA.jpg" alt="Page dashboard dump de données annulé"
+                  title="Desktop - Message d'erreur dump de données">
+              </figure>
+              <figure>
+                <figcaption>Dump de données</figcaption>
+                <img src="./assets/images/contenu/Covit/10_DataManagement_DumpDB_Confirmed_USA.jpg" alt="Page dashboard dump de données confirmé"
+                  title="Desktop - Message de confirmation dump de données">
+              </figure>
+              <figure>
+                <figcaption>Profil utilisateur</figcaption>
+                <img src="./assets/images/contenu/Covit/11_UserAccount_MyInfos_USA.jpg" alt="Page profil utilisateur"
+                  title="Desktop - Formulaire d'ajout de données">
+              </figure>
+              <figure>
+                <figcaption>Panneau administrateur</figcaption>
+                <img src="./assets/images/contenu/Covit/12_UserAccount_UserList_USA.jpg" alt="Page panneau administrateur"
+                  title="Desktop - Panneau administrateur">
+              </figure>
+              <figure>
+                <figcaption>Création de compte</figcaption>
+                <img src="./assets/images/contenu/Covit/13_UserAccount_CreatAccount_USA.jpg" alt="Page création de profil utilisateur"
+                  title="Desktop - création de profil utilisateur">
+              </figure>
+            </div>
+          </div>
+        </div>
 
         <div class="card_div">
           <article class="card">
@@ -137,7 +258,8 @@
               <a class="button" href="https://ozes-store.vercel.app/" target="_blank">App Démo</a>
               <a class="button" href="https://sylvainzoogones.wixsite.com/ozes-store" target="_blank">Site CMS</a>
               <i class="fa-solid fa-circle-down fa-xl scroll-icon"></i>
-              <p>Site e-commerce</p>
+              <p class="program_title1">Site e-commerce</p>
+              <p class="program_title1 diamondDivider">❖</p>
               <p>Il s'agit de la refonte du site précédemment réalisé avec un CMS.</p>
               <p>Dans cette nouvelle version du site j'ai développé :</p>
               <ul>
@@ -184,7 +306,8 @@
               <a class="button" href="https://github.com/Sylvain-Z/trickstrack" target="_blank">GitHub Repo</a>
               <a class="button" href="https://trickstrack.vercel.app/" target="_blank">App Démo</a>
               <i class="fa-solid fa-circle-down fa-xl scroll-icon"></i>
-              <p>Site de gestion de performances sportive. Axé sur la pratique et le partage lié au Skateboard.</p>
+              <p class="program_title1">Site de gestion de performances sportive. Axé sur la pratique et le partage lié au Skateboard.</p>
+              <p class="program_title1 diamondDivider">❖</p>
               <ul>
                 <li>Galerie videos communautaire</li>
                 <li>Jeu Skate Dice</li>
@@ -232,7 +355,9 @@
             <div class="contentToToggle toggle">
               <a class="button" href="https://github.com/Deuli-P/LDS/tree/sylvain" target="_blank">GitHub Repo</a>
               <i class="fa-solid fa-circle-down fa-xl scroll-icon"></i>
-              <p>Application de traduction de la langue des signes française. Projet Réalisé en collaboration avec Christophe Delmotte et Pierre Antonuitti.</p>
+              <p class="program_title1">Application de traduction de la langue des signes française.</p>
+              <p class="program_title1 diamondDivider">❖</p>
+              <p>Projet Réalisé en collaboration avec Christophe Delmotte et Pierre Antonuitti.</p>
               <p>Pour le moment j'ai travaillé sur :</p>
               <ul>
                 <li>Desgin Graphique - Logo & Couleur</li>
@@ -271,7 +396,8 @@
             <div class="contentToToggle toggle">
               <a class="button" href="https://github.com/Sylvain-Z/candidatrace" target="_blank">GitHub Repo</a>
               <i class="fa-solid fa-circle-down fa-xl scroll-icon"></i>
-              <p>Site de suvi de candidature d'emplois.</p>
+              <p class="program_title1">Site de suvi de candidature d'emplois.</p>
+              <p class="program_title1 diamondDivider">❖</p>
               <p>Ce projet a pour objectif de me faire maitriser les framework Angular et Spring Boot</p>
               <ul>
                 <li>Squelette statique réalisé avec Angular</li>
@@ -336,7 +462,8 @@
             <div class="contentToToggle toggle">
               <a class="button" href="https://github.com/Sylvain-Z/passornot" target="_blank">GitHub Repo</a>
               <a class="button" href="https://passornot.vercel.app/" target="_blank">App</a>
-              <p>Mini Application Javascript</p>
+              <p class="program_title1">Mini Application Javascript</p>
+              <p class="program_title1 diamondDivider">❖</p>
               <p>Une application de calcul de moyennes.</p>
             </div>
           </article>

@@ -126,7 +126,7 @@ function hideList() {
 /* COUNTDOWN */
 
 function Countdown() {
-    const targetTimestamp = new Date("2025-09-12T00:00:00").getTime(); // Date cible en timestamp
+    const targetTimestamp = new Date("2027-09-17T00:00:00").getTime(); // Date cible en timestamp
     const currentTimestamp = Date.now(); // Date actuelle en timestamp
     const difference = targetTimestamp - currentTimestamp;
   
