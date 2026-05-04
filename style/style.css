@@ -16,6 +16,25 @@
     --backG-deco: rgba(0, 0, 0, 0.2);
     --backGDarker-deco: rgba(0, 0, 0, 0.7);
     --backGDarkerPlus-deco: rgba(0, 0, 0, 0.9);
+
+    --space-xxs: 4px;
+    --space-xs: 8px;
+    --space-s: 16px;
+    --space-m: 24px;
+    --space-l: 32px;
+    --space-xl: 48px;
+
+    --font-size-xs: 12px;
+    --font-size-s: 14px;
+    --font-size-m: 16px;
+    --font-size-l: 20px;
+    --font-size-xl: 25px;
+
+    --border-radius-xs: 8px;
+    --border-radius-s: 12px;
+    --border-radius-m: 16px;
+    --border-radius-l: 24px;
+    --border-radius-pills: 100px;
 }
 
 @font-face {
@@ -66,9 +85,8 @@ html {
 }
 
 body {
-    font-size: 16px;
+    font-size: var(--font-size-m);
     font-family: 'NeutraText';
-    background-image: url('../assets/images/contenu/FondVert.jpg');
 }
 
 /* PAGE D'ACCUEIL */
@@ -87,9 +105,9 @@ body {
 .name {
     font-family: 'Lemon Milk';
     text-align: center;
-    text-shadow: 0 0 px black;
-    color: var(--White);
-    font-size: 25px;
+    color: var(--Yellow);
+    font-size: var(--font-size-xl);
+    text-shadow: 0 0 2px 2px var(--Black);
     margin-top: -45px;
     opacity: 0;
 }
@@ -109,7 +127,7 @@ body {
 #loader {
     width: 15px;
     height: 2px;
-    background-color: var(--White);
+    background-color: var(--Yellow);
     margin: auto;
     margin-top: 0px;
 }
@@ -171,11 +189,6 @@ h5 {
     text-transform: capitalize;
 }
 
-h1 {
-    font-size: 20px;
-    color: var(--White);
-}
-
 h2 {
     color: var(--Yellow);
     font-size: 25px;
@@ -190,79 +203,135 @@ h2::after {
     content: " /> ";
 }
 
+/* HEADER ----------------------------------------------- */
+
 header {
-    position: relative;
-    background-image: url('../assets/images/contenu/Photo.jpg');
-    background-size: 150%;
-    background-position: -150px -30px;
     width: 100%;
+    height: fit-content;
     display: flex;
     flex-direction: column;
-    padding: 25px 0 0 0;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-m) var(--space-xl);
     z-index: 1;
 }
 
-.header_principal {
-    /* Pour dissocier la "légende du header de la nav */
-    display: flex;
-    flex-direction: column;
-
-}
-
-.shadow_header {
-    width: 100%;
-    height: 280px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(43, 43, 43, 0));
-}
-
-.logoETnav {
-    display: flex;
-    flex-direction: column;
-    z-index: 20;
-}
-
 .divlogo_header {
-    width: 300px;
-    margin: auto;
-    text-shadow: 0 0 1px rgb(20, 20, 20);
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .logo_header {
-    width: 75px;
-    margin: auto;
+    width: 32px;
 }
 
-.name_header {
-    font-size: 25px;
-    margin: -30px 0 10px 0;
+h1 {
     font-family: 'Lemon Milk';
+    font-size: var(--font-size-m);
+    color: var(--Yellow);
+    margin: -10px 0 10px 0;
+    letter-spacing: var(--space-xs);
 }
 
 nav {
     display: flex;
     flex-direction: column;
-    font-family: 'Caviar Dreams Bold';
     text-transform: uppercase;
     text-align: center;
     flex-wrap: wrap;
+    gap: var(--space-m);
 }
 
 nav a {
-    font-size: 20px;
-    color: var(--White);
-    text-shadow: 0 0 1px rgb(20, 20, 20);
-    padding: 10px 25px;
+    font-size: var(--font-size-s);
+    font-family: 'Caviar Dreams Bold';
+    color: var(--Black);
 }
 
 nav a:hover {
     color: var(--Yellow);
-    background-color: var(--backGDarker-deco);
+}
+
+/* BURGER MENU ----------------------------------------------- */
+
+.burger_menu {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font-size: 24px;
+    color: var(--Black);
+    z-index: 2;
+    margin-top: 0;
+    transition: all 0.3s ease;
+}
+
+.burger_menu:hover {
+    color: var(--Yellow);
+}
+
+.burger_menu.active {
+    color: var(--Yellow);
+    position: fixed;
+    top: var(--space-m);
+    right: var(--space-m);
+    z-index: 999;
+    margin-top: 0;
+}
+
+.burger_menu i {
+    transition: all 0.3s ease;
+}
+
+header.scrolled .burger_menu {
+    position: fixed;
+    top: var(--space-m);
+    right: var(--space-m);
+    z-index: 999;
+    margin-top: 0;
+}
+
+.nav_menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--White);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 998;
+    gap: var(--space-xl);
+    padding-top: 80px;
+    overflow: auto;
+    
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.nav_menu.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav_menu a {
+    font-size: var(--font-size-s);
+    font-family: 'Caviar Dreams Bold';
+    color: var(--Black);
+}
+
+.nav_menu.active a {
+    font-size: var(--font-size-xl);
+}
+
+.nav_menu a:hover {
+    color: var(--Yellow);
 }
 
 header h2 {
@@ -279,7 +348,6 @@ header h2 {
     width: 80%;
     margin: auto;
     font-size: 20px;
-    color: var(--White);
     margin-bottom: 50px;
 }
 
@@ -325,7 +393,6 @@ footer a:visited {
 }
 
 .main_page {
-    background-image: url('../assets/images/contenu/FondVert.jpg');
     width: 100%;
     margin: auto;
     padding: 50px 0;

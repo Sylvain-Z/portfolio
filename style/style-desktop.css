@@ -4,18 +4,24 @@
 
     /* GENERAL */
 
-    .logoETnav {
-        width: 90%;
-        margin: 0 auto;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: first baseline;
+    .burger_menu {
+        display: none;
     }
 
-    nav {
+    nav,
+    .nav_menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
         margin: 0;
         flex-direction: row;
         justify-content: flex-end;
+        height: auto;
+        width: auto;
+        background-color: transparent;
+        z-index: auto;
+        padding: 0;
+        gap: var(--space-m);
     }
 
     /* PROJETS */

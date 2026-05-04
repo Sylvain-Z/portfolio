@@ -28,37 +28,40 @@
     /* GENERAL */
 
     header {
-        height: auto;
-        background-size: 200px;
-        background-position: 50% 70%;
-    }
-
-    .header_principal {
-        align-items: end;
-    }
-
-    .shadow_header {
-        height: 190px;
-        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(43, 43, 43, 0));
-    }
-
-    .logoETnav {
-        width: 90%;
-        margin: 0 auto;
         flex-direction: row;
         justify-content: space-between;
-        align-items: first baseline;
     }
 
     .divlogo_header {
-        margin: 0;
-        /* annule la marge du style-tablet */
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: var(--font-size-xs);
     }
 
-    nav {
+    h1 {
+        font-family: 'Lemon Milk';
+        margin: 0;
+    }
+
+    .burger_menu {
+        display: none;
+    }
+
+    nav,
+    .nav_menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
         margin: 0;
         flex-direction: row;
         justify-content: flex-end;
+        height: auto;
+        width: auto;
+        background-color: transparent;
+        z-index: auto;
+        padding: 0;
+        gap: var(--space-m);
     }
 
     .presentation {
@@ -120,12 +123,13 @@
         flex-direction: row;
         justify-content: space-between;
     }
- 
+
     .fonctionnalities-colonne {
         width: 48%;
     }
 
-    .tab-content, .fonctionnalities-ctnPopup {
+    .tab-content,
+    .fonctionnalities-ctnPopup {
         width: 100%;
     }
 
@@ -140,7 +144,7 @@
         top: 70px;
         left: 130px;
     }
-    
+
     /* Maquettes html */
 
     .maquettesHtml-img {
@@ -153,7 +157,7 @@
     .mobile figure {
         width: 24%;
     }
-    
+
     /* COMPETENCES */
 
     .logo,
@@ -161,6 +165,7 @@
         width: 45px;
         height: 45px;
     }
+
     .typescript {
         width: 40px;
         height: 40px;
