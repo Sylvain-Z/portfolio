@@ -3,9 +3,6 @@
 @media screen and (min-width: 781px) {
 
     /* ACCUEIL -------------------- */
-    .home_logo {
-        margin-top: 275px;
-    }
 
     @keyframes loading {
         0% {
