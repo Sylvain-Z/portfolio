@@ -111,7 +111,15 @@
 
     /* PROJETS */
 
-    .card_div {
+    .card_ctn {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: var(--space-m)
+    }
+
+    .card {
         width: 30%;
         max-width: 450px;
     }

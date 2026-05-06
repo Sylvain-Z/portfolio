@@ -49,15 +49,13 @@
 
     /* PROJETS */
 
-    .flex_grid {
-        flex-direction: row;
-        flex-wrap: wrap;
+    .card {
+        min-width: 280px;
+        width: 45%;
+        max-width: unset;
+        margin: 0;
     }
 
-    .card_div {
-        width: 45%;
-    }
-    
     /* HISTOIRE + PAGE CGU*/
 
     .CGU p {

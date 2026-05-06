@@ -25,6 +25,9 @@ function displayHeader() {
                 <i class="fas fa-bars"></i>
             </button>
             <nav class="nav_menu">
+                <a href="portfolio.html#formations">
+                    <p>Formations</p>
+                </a>
                 <a href="portfolio.html#projects">
                     <p>Projets</p>
                 </a>

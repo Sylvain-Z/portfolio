@@ -1,8 +1,9 @@
 :root {
 
-    --White: rgb(255, 255, 250);
+    --White: rgb(250, 250, 250);
     --Black: rgb(20, 20, 20);
     --Yellow: rgb(204, 158, 53);
+    --backgroundLight: rgb(245, 244, 240);
     --Green: rgb(29, 146, 0);
     --Red: rgb(155, 0, 0);
     --pink: rgb(254, 0, 112);
@@ -87,6 +88,32 @@ html {
 body {
     font-size: var(--font-size-m);
     font-family: 'NeutraText';
+    background-color: transparent;
+}
+
+/* Background image moved to pseudo-element so we can control opacity */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url('../assets/images/picto_perso/Logo.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto 90%;
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Relever le contenu au-dessus du background pseudo-élément */
+header,
+main,
+footer,
+.main_page,
+.home {
+    position: relative;
+    z-index: 1;
+    background: transparent;
 }
 
 /* PAGE D'ACCUEIL */
@@ -232,8 +259,8 @@ header {
 
 h1 {
     font-family: 'Lemon Milk';
-    font-size: var(--font-size-m);
-    color: var(--Yellow);
+    font-size: var(--font-size-s);
+    color: var(--Black);
     margin: -10px 0 10px 0;
     letter-spacing: var(--space-xs);
 }
@@ -346,16 +373,43 @@ header h2 {
     background-color: var(--backGDarker-deco);
 }
 
+section {
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-xl);
+}
+
+.section1 {
+    width: 100%;
+    height: calc( 100vh - 126px); /* - header height ++ */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    padding-top: 0;
+}
+
+.fontawesome-ctn {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--border-radius-pills);
+    background-color: var(--Yellow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fa-chevron-down {
+    margin: 0 !important;
+}
+
 .citation,
 .citation2 {
     width: 80%;
-    margin: auto;
-    font-size: 20px;
-    margin-bottom: 50px;
+    margin-bottom: var(--space-xl);
 }
 
 .citation {
-    margin-bottom: 0px;
+    margin-bottom: var(--space-xs);
 }
 
 .bordure {
@@ -398,24 +452,32 @@ footer a:visited {
 .main_page {
     width: 100%;
     margin: auto;
-    padding: 50px 0;
 }
-
 
 /* PROJETS */
 
-h3 {
-    color: var(--Yellow);
-    font-size: 20px;
-    margin: 25px 0;
-}
-
-.card_ctn {
+.section_part {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 100px;
+    gap: var(--space-m)
 }
+
+h3 {
+    color: var(--Black);
+    font-size: var(--font-size-s);
+    margin-bottom: var(--space-s);
+}
+
+.card_ctn {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-m)
+}
+
 .radius-top {
     border-radius: 15px 15px 0 0;
 }
@@ -426,33 +488,87 @@ h3 {
     border-radius: 15px 15px 15px 15px;
 }
 
-.flex_grid {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-self: flex-end;
-}
-
 .card {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 90%;
-    min-height: 225px;
-    margin: 25px auto;
-    background-color: var(--White);
-    padding-bottom: 25px;
+    max-width: 280px;
+    margin: auto;
+    background-color: var(--backgroundLight);
+    padding: var(--space-s);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius-m);
+    overflow: hidden;
+}
+
+#projects .card {
+    padding: 0;
 }
 
 .card:hover {
     transform: scale(1.02, 1.02);
-    box-shadow: 0 0 10px 5px var(--Black);
 }
 
 .card img {
     width: 100%;
+}
+
+.card img.logo_epsi {
+    width: 75px;
+}
+.card img.logo_3wa {
+    width: 50px;
+}
+
+#projects .caption {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-m);
+    padding: var(--space-xs) var(--space-s);
+}
+
+.caption-qanswer {
+    background: rgba(0, 58, 146, 0.5);
+}
+.caption-covit {
+    background: rgba(153, 0, 51, 0.5);
+}
+.caption-ozesstore {
+    background: rgba(0, 0, 0, 0.5);
+}
+.caption-TricksTrack {
+    background: rgba(43, 11, 50, 0.5);
+}
+.caption-CandidaTrace {
+    background: rgba(245, 245, 245, 0.5);
+}
+
+#projects .caption h3, #projects .caption p {
+    color: var(--Black);
+    font-size: var(--font-size-s);
+    margin: 0;
+}
+#projects .caption p {
+    padding: 2px var(--space-xs);
+    border: 1px solid var(--Black);
+    border-radius: var(--border-radius-pills);
+}
+.caption-ozesstore p, .caption-TricksTrack p, .caption-CandidaTrace p {
+    border: 1px solid var(--White) !important;
+    color: var(--White) !important;
+}
+.caption-ozesstore h3, .caption-TricksTrack h3, .caption-CandidaTrace h3 {
+    color: var(--White) !important;
+}
+
+.project_links {
+    border: none !important;
 }
 
 .coworker {
@@ -462,8 +578,7 @@ h3 {
 
 .card p,
 .card li {
-    color: var(--Black);
-    margin: 25px;
+    margin: var(--space-m);
     font-family: 'NeutraText';
     list-style: none;
 }
@@ -478,12 +593,12 @@ h3 {
 }
 
 .card li {
-    margin-left: 50px;
+    margin-left: var(--space-xl);
 }
 
 .fa-chevron-up,
 .fa-chevron-down {
-    margin-top: 25px;
+    margin-top: var(--space-m);
 }
 
 .fa-chevron-up:hover,
@@ -703,9 +818,10 @@ h4 {
     flex-direction: column;
     margin: auto;
     margin-top: -25px;
+    margin-bottom: var(--space-m);
     /* sert à coller les blocs compétences au projet précédent */
-    padding: 25px;
-    background-color: var(--White);
+    padding: var(--space-m);
+    background-color: var(--backgroundLight);
 }
 
 .technologies,
@@ -848,6 +964,7 @@ h4 {
     /* réinitialise la margin du h3 général */
     z-index: 10;
     font-family: 'Caviar Dreams Bold';
+    color: var(--Yellow);
 }
 
 
@@ -968,7 +1085,7 @@ h4 {
     margin: 25px auto;
     font-size: 18px;
     line-height: 30px;
-    color: var(--White);
+    color: var(--Black);
 }
 
 .CGU p {
@@ -1161,15 +1278,15 @@ textarea {
     left: 50%;
     bottom: 4px;
     transform: translate(-50%, 0);
-    background-color: var(--White);
+    background-color: var(--backgroundLight);
     font-size: 10px;
 }
 .certified {
     text-align: center;
     color: var(--Yellow);
 }
-.fa-graduation-cap {
-    margin: 25px auto;
+.fa-graduation-cap,.fa-clock {
+    margin-top: 25px;
     color: var(--Yellow);
 }
 
