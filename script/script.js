@@ -61,6 +61,13 @@ function openPopupOnCardClick() {
     projectCards.forEach((card, index) => {
         card.style.cursor = 'pointer';
         card.addEventListener('click', () => {
+            // Vérifier si une popup est déjà ouverte
+            const popupAlreadyOpen = document.querySelector('.popup_ctn.active');
+            if (popupAlreadyOpen) return;
+
+            // Désactiver le cursor pointer quand la popup s'ouvre
+            projectCards.forEach(c => c.style.cursor = 'default');
+
             if (popupContainers[index]) {
                 popupContainers[index].style.display = 'flex';
                 popupContainers[index].classList.add('active');
@@ -80,6 +87,10 @@ function openPopupOnCardClick() {
 function openPopUp() {
     for (let i = 0; i < openBtn.length; i++) {
       openBtn[i].addEventListener('click', () => {
+          // Vérifier si une popup est déjà ouverte
+          const popupAlreadyOpen = document.querySelector('.popup_ctn.active');
+          if (popupAlreadyOpen) return;
+
           popups[i].style.display = 'flex';
           popups[i].classList.add("active");
           document.body.classList.add("noscroll");
@@ -94,11 +105,31 @@ function openPopUp() {
 function closePopUp() {
     for (let i = 0; i < closeBtn.length; i++) {
             closeBtn[i].addEventListener('click', () => {
+              const projectCards = document.querySelectorAll('#projects .card');
+              projectCards.forEach(card => card.style.cursor = 'pointer');
+
               popups[i].style.display = 'none';
               popups[i].classList.remove("active");
               document.body.classList.remove("noscroll");
         });
     }
+}
+
+function closePopUpOnBackdropClick() {
+    const popupContainers = document.querySelectorAll('.popup_ctn');
+
+    popupContainers.forEach((container) => {
+        container.addEventListener('click', (e) => {
+            if (!e.target.closest('.popup_box')) {
+                const projectCards = document.querySelectorAll('#projects .card');
+                projectCards.forEach(card => card.style.cursor = 'pointer');
+
+                container.style.display = 'none';
+                container.classList.remove("active");
+                document.body.classList.remove("noscroll");
+            }
+        });
+    });
 }
 
 function openTab(evt, tabId) {
@@ -202,6 +233,7 @@ document.addEventListener('DOMContentLoaded', () => {
     openPopupOnCardClick();
     openPopUp();
     closePopUp();
+    closePopUpOnBackdropClick();
 
     showList();
     hideList();

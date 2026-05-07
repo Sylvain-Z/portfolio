@@ -510,6 +510,14 @@ h3 {
     transform: scale(1.02, 1.02);
 }
 
+body.noscroll .card:hover {
+    transform: scale(1, 1);
+}
+
+body.noscroll .card {
+    cursor: default;
+}
+
 .card img {
     width: 100%;
 }
