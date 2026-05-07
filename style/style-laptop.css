@@ -145,11 +145,6 @@
         left: 100px;
     }
 
-    .closePopup_btn {
-        top: 70px;
-        left: 130px;
-    }
-
     /* Maquettes html */
 
     .maquettesHtml-img {
@@ -164,17 +159,6 @@
     }
 
     /* COMPETENCES */
-
-    .logo,
-    .merge_logo {
-        width: 45px;
-        height: 45px;
-    }
-
-    .typescript {
-        width: 40px;
-        height: 40px;
-    }
 
     .merge_logo2 {
         width: 40%;

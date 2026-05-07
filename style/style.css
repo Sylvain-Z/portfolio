@@ -502,6 +502,8 @@ h3 {
 
 #projects .card {
     padding: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .card:hover {
@@ -545,6 +547,9 @@ h3 {
 .caption-CandidaTrace {
     background: rgba(245, 245, 245, 0.5);
 }
+.caption-monportfolio, .caption-passornot {
+    background: rgba(204, 158, 53, 0.5);
+}
 
 #projects .caption h3, #projects .caption p {
     color: var(--Black);
@@ -556,11 +561,17 @@ h3 {
     border: 1px solid var(--Black);
     border-radius: var(--border-radius-pills);
 }
-.caption-ozesstore p, .caption-TricksTrack p, .caption-CandidaTrace p {
+.caption-ozesstore p,
+.caption-TricksTrack p,
+.caption-CandidaTrace p,
+.caption-monportfolio p {
     border: 1px solid var(--White) !important;
     color: var(--White) !important;
 }
-.caption-ozesstore h3, .caption-TricksTrack h3, .caption-CandidaTrace h3 {
+.caption-ozesstore h3,
+.caption-TricksTrack h3,
+.caption-CandidaTrace h3,
+.caption-monportfolio h3 {
     color: var(--White) !important;
 }
 
@@ -645,7 +656,7 @@ form button {
 .button_contact {
     color: var(--White);
     background-color: var(--Green);
-    border: none;
+    border: 1px solid transparent;
 }
 
 .openPopup_btn {
@@ -661,6 +672,7 @@ form button {
     flex-direction: column;
     align-items: center;
     gap: var(--space-m);
+    margin-top: var(--space-m);
 }
 
 .git-ctn {
@@ -701,6 +713,7 @@ form button {
     transform: translateX(-50%);
     padding: 5px 15px;
     color: var(--Black) !important;
+    border: 1px solid transparent;
 }
 
 .button, .openPopup_btn {
@@ -735,14 +748,15 @@ body.noscroll {
     bottom: 0;
     left: 0;
     padding: 20px;
-    background-color: var(--backGDarkerPlus-deco);
+    background-color: var(--backgroundLight);
+    border-radius: var(--border-radius-m);
     display: none;
     align-items: center;
     justify-content: center;
     z-index: 1000;
-    box-shadow: 0px 0px 10px 5px var(--Black);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     animation: fadeIn 0.3s ease-in-out;
-    overflow-y: auto;
+    overflow-y: hidden;
 }
 
 @keyframes fadeIn {
@@ -752,8 +766,21 @@ body.noscroll {
 
 .popup_box {
     width: 100%;
-    height: 100%;
-    color: var(--White);
+    max-width: 800px;
+    max-height: 90vh;
+    color: var(--Black);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--backGDarker);
+    border-radius: 10px;
+    padding: 30px;
+    overflow-y: auto;
+    position: relative;
+}
+
+.popup_box h2 {
+    margin-bottom: var(--space-s);
+    color: var(--Black);
 }
 
 .fonctionnalities-ctn {
@@ -790,22 +817,20 @@ body.noscroll {
 }
 
 .closePopup_btn {
-    position: fixed;
+    position: absolute;
     width: 30px;
     height: 30px;
     font-size: 18px;
-    top: 20px;
-    left: 30px;
+    top: 10px;
+    right: 10px;
     background: var(--Red);
-    color: var(--Black);
+    color: var(--White);
     border-radius: 50%;
     border: none;
     cursor: pointer;
+    z-index: 1001;
 }
 
-.tabs {
-    margin-bottom: 25px;
-}
 .tab-button:hover {
     transform: translatey(-2px);
 }
@@ -817,7 +842,27 @@ body.noscroll {
 
 .tab-content {
     display: none;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    max-height: 70vh;
+    overflow-y: auto;
 }
+
+.popup-links {
+    display: flex;
+    gap: var(--space-xs);
+    border-top: 1px solid var(--DarkGrey);
+}
+
+.popup-links .button {
+    width: fit-content;
+}
+
+.tab-content .button {
+    width: fit-content;
+}
+
 .tab-content.active {
     display: flex;
 }
@@ -841,6 +886,11 @@ h4 {
     padding: var(--space-m);
     background-color: var(--backgroundLight);
 }
+.skills {
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+}
 
 .technologies,
 .technologies-header {
@@ -848,24 +898,14 @@ h4 {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-around;
-    margin-top: 25px;
-}
-
-.technologies-header {
-    width: auto;
-    justify-content: left;
-    margin: 25px;
-}
-
-.technologies-header>img {
-    margin: 0 25px 25px 0;
+    justify-content: center;
+    gap: var(--space-s);
 }
 
 .logo,
 .merge_logo {
-    width: 35px;
-    height: 35px;
+    width: 25px;
+    height: 25px;
 }
 
 .technologies>.merge_logo {

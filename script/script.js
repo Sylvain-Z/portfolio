@@ -33,7 +33,8 @@ const closeBtn = document.getElementsByClassName('closePopup_btn');
 
 function showContent() {
     for (let i = 0; i < toggleShow.length; i++) {
-        toggleShow[i].addEventListener('click', () => {
+        toggleShow[i].addEventListener('click', (e) => {
+            e.stopPropagation();
             content[i].classList.remove('toggle');
             toggleHide[i].classList.add('fa-solid', 'fa-chevron-up', 'fa-xl');
             toggleShow[i].classList.remove('fa-solid', 'fa-chevron-down', 'fa-xl');
@@ -42,12 +43,36 @@ function showContent() {
 }
 function hideContent() {
     for (let i = 0; i < toggleHide.length; i++) {
-        toggleHide[i].addEventListener('click', () => {
+        toggleHide[i].addEventListener('click', (e) => {
+            e.stopPropagation();
             content[i].classList.add('toggle');
             toggleHide[i].classList.remove('fa-solid', 'fa-chevron-up', 'fa-xl');
             toggleShow[i].classList.add('fa-solid', 'fa-chevron-down', 'fa-xl');
         });
     }
+}
+
+/* OPEN POPUP ON CARD CLICK */
+
+function openPopupOnCardClick() {
+    const projectCards = document.querySelectorAll('#projects .card');
+    const popupContainers = document.querySelectorAll('.popup_ctn');
+
+    projectCards.forEach((card, index) => {
+        card.style.cursor = 'pointer';
+        card.addEventListener('click', () => {
+            if (popupContainers[index]) {
+                popupContainers[index].style.display = 'flex';
+                popupContainers[index].classList.add('active');
+                document.body.classList.add('noscroll');
+
+                const defaultTab = popupContainers[index].querySelector('.tab-button');
+                if (defaultTab) {
+                    defaultTab.click();
+                }
+            }
+        });
+    });
 }
 
 /* TOGGLE POPUPS PROJECTS */
@@ -174,6 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     showContent();
     hideContent();
+    openPopupOnCardClick();
     openPopUp();
     closePopUp();
 
