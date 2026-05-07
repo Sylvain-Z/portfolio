@@ -627,6 +627,7 @@ h3 {
 .button_book,
 .button_contact,
 .github-btn,
+.gitlab-btn,
 form button {
     display: inline-block;
     font-family: 'NeutraText', sans-serif;
@@ -636,8 +637,15 @@ form button {
     padding: 5px 15px;
     background-color: var(--Yellow);
     border: 1px solid var(--Yellow);
+    border-radius: var(--border-radius-pills);
     cursor: pointer;
     /* sans ça le hover fait redimensionner l'élément */
+}
+
+.button_contact {
+    color: var(--White);
+    background-color: var(--Green);
+    border: none;
 }
 
 .openPopup_btn {
@@ -647,36 +655,55 @@ form button {
     font-size: 16px;
 }
 
-.github-figure {
-    position: relative;
-    margin-top: 25px;
+.projects_plus_ctn {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-m);
 }
 
-.github-figure:hover {
+.git-ctn {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xl);
+}
+
+.git-links {
+    height: fit-content;
+}
+
+.github-figure,
+.gitlab-figure {
+    position: relative;
+}
+
+.github-figure:hover,
+.gitlab-figure:hover {
     transform: scale(1.02);
 }
 
-.github-img {
+.github-img,
+.gitlab-img {
     display: block;
-    width: 100px;
-    margin: auto;
+    width: 50px;
+    margin: 0 auto;
 }
 
-.github-btn {
+.github-btn,
+.gitlab-btn {
     position: absolute;
-    width: 155px;
-    bottom: -15px;
-    left: -25px;
+    width: 91px;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
     padding: 5px 15px;
     color: var(--Black) !important;
 }
 
 .button, .openPopup_btn {
-    margin-bottom: 25px;
-}
-
-.button_book {
-    margin-top: 35px;
     margin-bottom: 25px;
 }
 
