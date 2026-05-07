@@ -37,7 +37,7 @@ function displayHeader() {
                 <a href="portfolio.html#journey">
                     <p>Histoire</p>
                 </a>
-                <a href="portfolio.html#CV">
+                <a href="portfolio.html#contact">
                     <p>CV</p>
                 </a>
                 <a href="portfolio.html#contact">

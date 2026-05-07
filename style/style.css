@@ -240,7 +240,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: var(--space-m) var(--space-xl);
-    z-index: 1;
+    z-index: 2000;
 }
 
 .divlogo_header {
@@ -305,7 +305,7 @@ nav a:hover {
     position: fixed;
     top: var(--space-m);
     right: var(--space-m);
-    z-index: 999;
+    z-index: 2002;
     margin-top: 0;
 }
 
@@ -317,7 +317,7 @@ header.scrolled .burger_menu {
     position: fixed;
     top: var(--space-m);
     right: var(--space-m);
-    z-index: 999;
+    z-index: 2002;
     margin-top: 0;
 }
 
@@ -332,7 +332,7 @@ header.scrolled .burger_menu {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 998;
+    z-index: 2001;
     gap: var(--space-xl);
     padding-top: 80px;
     overflow: auto;
@@ -641,7 +641,6 @@ body.noscroll .card {
 }
 
 .tab-button,
-.openPopup_btn,
 .button,
 .button_book,
 .button_contact,
@@ -839,12 +838,16 @@ body.noscroll {
     z-index: 1001;
 }
 
+.tab-button {
+    background-color: var(--White);
+}
 .tab-button:hover {
     transform: translatey(-2px);
+    color: var(--Yellow);
 }
 .tab-button.active {
     transform: translatey(-4px);
-    background-color: var(--White);
+    background-color: var(--Yellow);
     border: none;
 }
 
