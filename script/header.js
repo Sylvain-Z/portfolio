@@ -38,10 +38,7 @@ function displayHeader() {
                     <p>Histoire</p>
                 </a>
                 <a href="portfolio.html#contact">
-                    <p>CV</p>
-                </a>
-                <a href="portfolio.html#contact">
-                    <p>Contact</p>
+                    <p>Contact · CV</p>
                 </a>
             </nav>
         `;

@@ -222,6 +222,29 @@ function Countdown() {
   // Met à jour le compte à rebours chaque seconde
   const interval = setInterval(Countdown, 1000);
 
+  /* BACK TO TOP */
+  function initBackToTop() {
+    const btn = document.querySelector('.back-to-top');
+    if (!btn) return;
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  /* Show back-to-top after scrolling */
+  function initBackToTopVisibility() {
+    const btn = document.querySelector('.back-to-top');
+    if (!btn) return;
+    const threshold = 200; // px
+    const update = () => {
+      if (window.scrollY > threshold) btn.classList.add('visible');
+      else btn.classList.remove('visible');
+    };
+    update();
+    window.addEventListener('scroll', update);
+  }
+
 /************************************************************************************/
 /* ******************************** CODE PRINCIPAL **********************************/
 /************************************************************************************/
@@ -237,4 +260,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     showList();
     hideList();
+    initBackToTop();
+    initBackToTopVisibility();
 });

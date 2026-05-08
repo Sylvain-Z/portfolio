@@ -1171,6 +1171,23 @@ body.noscroll {
     margin: auto;
 }
 
+.cv-link {
+    display: inline-block;
+    margin-top: 8px;
+    color: var(--White);
+    background-color: transparent;
+    border: 1px solid var(--White);
+    padding: 6px 12px;
+    border-radius: var(--border-radius-pills);
+    text-decoration: none;
+    font-family: 'NeutraText Bold', sans-serif;
+}
+
+.cv-link:hover {
+    background-color: var(--White);
+    color: var(--Black);
+}
+
 .timer,
 .timer_clock_hand {
     display: block;
@@ -1306,6 +1323,45 @@ textarea {
 .fa-graduation-cap,.fa-clock {
     margin-top: 25px;
     color: var(--Yellow);
+}
+
+/* Back to top button - shown only on laptop/desktop */
+.back-to-top {
+    position: fixed;
+    right: 32px;
+    bottom: 32px;
+    width: 44px;
+    height: 44px;
+    display: inline-flex; /* enabled on all sizes but hidden by opacity on mobile */
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Yellow);
+    color: var(--Black);
+    border-radius: 50%;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    z-index: 3000;
+    text-decoration: none;
+    transition: transform 0.18s ease, opacity 0.18s ease, visibility 0.18s;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(8px);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    transform: translateY(-4px);
+}
+
+@media (max-width: 780px) {
+    /* hide on tablet and mobile, visible only on laptop/desktop (781px+) */
+    .back-to-top { display: none !important; }
 }
 
 .hidden {
