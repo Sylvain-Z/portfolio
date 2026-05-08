@@ -79,7 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
     displayHeader();
 
     // Logique du scroll pour fixer le burger
-    let lastScrollTop = 0;
     const header = document.getElementById('header');
 
     window.addEventListener('scroll', () => {
@@ -90,7 +89,5 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             header.classList.remove('scrolled');
         }
-
-        lastScrollTop = scrollTop;
     });
 });

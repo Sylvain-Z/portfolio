@@ -751,7 +751,6 @@ body.noscroll {
     background-color: var(--backgroundLight);
     border-radius: var(--border-radius-m);
     display: none;
-    align-items: center;
     justify-content: center;
     z-index: 1000;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
@@ -774,6 +773,7 @@ body.noscroll {
     background-color: var(--backGDarker);
     border-radius: var(--border-radius-m);
     padding: var(--space-m);
+    padding-top: var(--space-xl);
     overflow-y: auto;
     position: relative;
 }
@@ -821,8 +821,9 @@ body.noscroll {
     width: 30px;
     height: 30px;
     font-size: var(--font-size-m);
-    top: 10px;
-    right: 10px;
+    top: 0;
+    right: 50%;
+    transform: translate(50%, 0);
     background: var(--Red);
     color: var(--White);
     border-radius: 50%;
