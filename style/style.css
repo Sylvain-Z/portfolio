@@ -1171,23 +1171,6 @@ body.noscroll {
     margin: auto;
 }
 
-.cv-link {
-    display: inline-block;
-    margin-top: 8px;
-    color: var(--White);
-    background-color: transparent;
-    border: 1px solid var(--White);
-    padding: 6px 12px;
-    border-radius: var(--border-radius-pills);
-    text-decoration: none;
-    font-family: 'NeutraText Bold', sans-serif;
-}
-
-.cv-link:hover {
-    background-color: var(--White);
-    color: var(--Black);
-}
-
 .timer,
 .timer_clock_hand {
     display: block;
@@ -1349,10 +1332,11 @@ textarea {
 }
 
 .back-to-top.visible {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    transform: translateY(0);
+    opacity: 1 !important; /* !important a été rajouté car Adblock masque le boutton */
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transform: translateY(0) !important;
+    display: inline-flex !important;
 }
 
 .back-to-top:hover {
