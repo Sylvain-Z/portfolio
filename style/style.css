@@ -634,7 +634,6 @@ body.noscroll .card {
 }
 
 .tab-button,
-.button,
 .button_book,
 .button_contact,
 .github-btn,
@@ -717,11 +716,10 @@ form button {
     border: 1px solid transparent;
 }
 
-.button, .openPopup_btn {
+.openPopup_btn {
     margin-bottom: var(--space-m);
 }
 
-.button:hover,
 .button_book:hover,
 .button_contact:hover {
     border: 1px solid var(--Yellow);
@@ -860,13 +858,32 @@ body.noscroll {
 
 .popup-links {
     display: flex;
-    gap: var(--space-xs);
-    border-top: 1px solid var(--DarkGrey);
+    flex-wrap: wrap;
+    gap: var(--space-m);
+    justify-content: center;
+    align-items: center;
+    margin: var(--space-m) 0;
 }
 
-.popup-links .button {
-    width: fit-content;
+.popup-links a {
+    display: inline-block;
+    padding: var(--space-xs) var(--space-m);
+    background-color: transparent;
+    color: var(--Black);
+    border: none;
+    font-family: 'NeutraText', sans-serif;
+    font-size: var(--font-size-s);
+    text-transform: capitalize;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
 }
+
+.popup-links a:hover {
+    color: var(--Yellow);
+}
+
 
 .tab-content .button {
     width: fit-content;
