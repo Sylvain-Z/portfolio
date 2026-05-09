@@ -402,10 +402,6 @@ section {
     justify-content: center;
 }
 
-.fa-chevron-down {
-    margin: 0 !important;
-}
-
 .citation,
 .citation2 {
     width: 80%;
@@ -617,16 +613,6 @@ body.noscroll .card {
 
 .card li {
     margin-left: var(--space-xl);
-}
-
-.fa-chevron-up,
-.fa-chevron-down {
-    margin-top: var(--space-m);
-}
-
-.fa-chevron-up:hover,
-.fa-chevron-down:hover {
-    cursor: pointer;
 }
 
 .toggle {
