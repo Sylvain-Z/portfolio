@@ -52,13 +52,63 @@
         visibility: visible;
         margin: 0;
         flex-direction: row;
-        justify-content: flex-end;
+        justify-content: flex-start;
         height: auto;
         width: auto;
         background-color: transparent;
         z-index: auto;
         padding: 0;
         gap: var(--space-m);
+    }
+
+    .nav_scroll_wrap {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: var(--space-xs);
+    }
+
+    .nav_menu {
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        max-width: 100%;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .nav_menu::-webkit-scrollbar {
+        display: none;
+    }
+
+    .nav_scroll_btn {
+        width: 24px;
+        height: 24px;
+        border: 1px solid var(--Yellow);
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--Yellow);
+        background-color: transparent;
+        cursor: pointer;
+        transition: opacity 0.2s ease, transform 0.2s ease;
+        flex-shrink: 0;
+    }
+
+    .nav_scroll_btn:hover {
+        transform: scale(1.05);
+        background-color: var(--Yellow);
+        color: var(--White);
+    }
+
+    .nav_scroll_btn.is-hidden {
+        opacity: 0;
+        pointer-events: none;
     }
 
     .presentation {
